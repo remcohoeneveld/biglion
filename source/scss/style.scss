@@ -1,0 +1,38 @@
+.logo-brand{
+    width: 110px;
+    height: 110px;
+    position: absolute;
+    border: solid 5px #f5ca20;
+    background-color: black;
+    border-radius: 50%;
+    margin-top:35px;
+}
+
+.nav-dropdown-link{
+    color: black;
+    padding-left: 10px;
+}
+
+.nav-dropdown-link:hover{
+    color: lightgrey;
+    padding-left: 10px;
+}
+
+.top{
+    margin-top: 64px;
+}
+
+.bg-dark {
+    background-color: #2b6530!important;
+    border-bottom: solid 40px #f5ca20;
+}
+
+#success_message{ display: none;}
+
+.card {
+    float: left;
+    width: 33.333%;
+    padding: .75rem;
+    margin-bottom: 2rem;
+    border: 0;
+}

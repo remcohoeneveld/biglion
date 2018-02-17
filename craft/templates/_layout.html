@@ -1,0 +1,116 @@
+<html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+    <meta charset="utf-8"/>
+    <title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
+    <link rel="home" href="{{ siteUrl }}"/>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+
+    <link rel="stylesheet" type="text/css" href="{{ siteUrl}}/assets/styles/styles.css">
+
+    <link rel="stylesheet" type="text/css" href="{{ siteUrl}}/assets/styles/cubeportfolio/cubeportfolio.min.css">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+
+
+
+<div id="container">
+    <div class="wrapper">
+
+        <div id="header-banner">
+            <div class="header section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s12">
+                            <h1>Big Lion Events</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li><a href="{{ siteUrl}}#skills">Skills</a></li>
+                </ul>
+                <ul>
+                    <li><a href="{{ siteUrl}}#portfolio">Portfolio</a></li>
+                </ul>
+                <ul>
+                    <li><a href="{{ siteUrl}}#about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <main id="content" role="main">
+            {% block content %}
+            {% endblock %}
+        </main>
+
+
+        <div class="push"></div>
+    </div>
+
+
+    <footer class="page-footer footer">
+        <div class="container">
+            <div class="row">
+                <div class="contact col l6 s12">
+                    <h5>Contact info</h5>
+                    <div class="contact-info wow animated fadeInRight animated" data-wow-delay=".6s"
+                         style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInRight;">
+                        <p><i class="fa fa-home"></i> 20B, Lumeystraat, Rotterdam, Nederland</p>
+
+                        <p><i class="fa fa-home"></i> +316 41185118</p>
+                    </div>
+                </div>
+                <div class="social col l4 offset-l2 s12">
+                    <h5>Social Media</h5>
+                    <ul>
+                        <li><a href="https://www.facebook.com/rhoeneveld">Facebook</a>
+                        </li>
+                        <li><a ref="https://twitter.com/RemcoHoeneveld">Twitter</a>
+                        </li>
+                        <li><a href="https://plus.google.com/+RemcohoeneveldNl/about">LinkedIn</a>
+                        </li>
+                        <li><a href="https://nl.linkedin.com/pub/remco-hoeneveld/a1/127/141">Soundcloud</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                <footer id="footer" class="main-footer">
+                    Copyright {{ now.year }} {{ craft.request.serverName | ucfirst }}. All rights reserved
+                </footer>
+                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+        </div>
+    </footer>
+
+
+</div>
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.js"></script>
+
+<script type="text/javascript" src="{{ siteUrl}}/assets/js/navbar.js"></script>
+
+<script type="text/javascript" src="{{ siteUrl}}/assets/js/jquery.cubeportfolio.js"></script>
+
+<script type="text/javascript" src="{{ siteUrl}}/assets/js/main.js"></script>
+
+<script type="text/javascript" src="{{ siteUrl}}/assets/js/resize.js"></script>
+
+<script type="text/javascript" src="{{ siteUrl}}/assets/js/smoothscroll.js"></script>
+</body>
+</html>
