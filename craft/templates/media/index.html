@@ -11,27 +11,27 @@
 #}
 
 {% extends "_layout" %}
-{% set title = "News" %}
+{% set title = "Media" %}
 
 {% block content %}
 <section class="jumbotron text-center">
     <div class="container">
         <h1 class="jumbotron-heading">{% if title is defined %}{{ title }}{% endif %}</h1>
-        <p class="lead text-muted">News of Big Lion Promotions!</p>
+        <p class="lead text-muted">Media of Big Lion Promotions!</p>
     </div>
 </section>
 <div class="container">
-    {% for entry in craft.entries.section('news').find() %}
+    {% for entry in craft.entries.section('media').find() %}
     <article>
         <h3><a href="{{ entry.url }}">{{ entry.title }}</a></h3>
         <p>Posted on {{ entry.postDate.format('F d, Y') }}</p>
         {{ entry.body.getPage(1) }}
         <p><a href="{{ entry.url }}">Continue reading</a></p>
     </article>
-
+    {% endfor %}
     <div class="row">
         <!-- Related Projects Row -->
-        <h3 class="my-4">Recent news</h3>
+        <h3 class="my-4">Media</h3>
 
         <div class="row">
 
@@ -61,6 +61,5 @@
 
         </div>
     </div>
-    {% endfor %}
 </div>
 {% endblock %}

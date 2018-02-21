@@ -1,38 +1,176 @@
-.logo-brand{
-    width: 110px;
-    height: 110px;
-    position: absolute;
-    border: solid 5px #f5ca20;
-    background-color: black;
-    border-radius: 50%;
-    margin-top:35px;
+@import "color";
+
+.featureImage {
+  object-fit: cover;
+  width: 100%;
+  height: 200px;
 }
 
-.nav-dropdown-link{
-    color: black;
-    padding-left: 10px;
+a {
+  color: $gold;
+  line-height: 70px;
+  &:hover {
+    color: $textcolor;
+    text-decoration: none;
+  }
 }
 
-.nav-dropdown-link:hover{
-    color: lightgrey;
-    padding-left: 10px;
+.shows {
+  .header-show {
+    position: relative;
+    text-align: center;
+    color: white;
+    .centered {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(0, 0, 0, 0.5);
+      width: 100%;
+      a {
+        color: $gold;
+        padding: 15px;
+        &:hover {
+          background-color: $gold;
+          border-color: $gold;
+          color: $textcolor;
+        }
+      }
+    }
+  }
+  p {
+    a {
+      background: black;
+      padding: 15px;
+      &:hover {
+        color: $red;
+      }
+    }
+  }
 }
 
-.top{
-    margin-top: 64px;
+.show-detail{
+  margin-top: 20px;
+  article{
+    h1{
+      background: black;
+      color: $gold;
+      padding: 20px;
+      display: inline-block;
+      margin-top: 10px;
+    }
+  }
+}
+
+.head {
+  margin-left: 15px;
+}
+
+.bg-light {
+  background-color: $textcolor !important;
+  padding: 25px;
+  h1 {
+    font-weight: lighter;
+    font-size: 100px;
+    max-width: 500px;
+    color: $gold;
+    line-height: 80px;
+    .promotions {
+      color: #FFDD00;
+      font-size: 80px;
+      font-weight: 400;
+    }
+  }
+}
+
+.btn-outline-success {
+  color: $gold;
+  border-color: $gold;
+  &:hover {
+    background-color: $gold;
+    border-color: $gold;
+    color: $textcolor;
+  }
 }
 
 .bg-dark {
-    background-color: #2b6530!important;
-    border-bottom: solid 40px #f5ca20;
+  padding: 0;
+  background-color: darkgrey !important;
+  a {
+    color: $gold;
+    padding: 15px;
+    &:hover {
+      color: $green;
+      background-color: $gold;
+    }
+  }
+  .navbar-toggler-icon {
+    color: $gold;
+  }
 }
 
-#success_message{ display: none;}
-
 .card {
-    float: left;
-    width: 33.333%;
-    padding: .75rem;
-    margin-bottom: 2rem;
-    border: 0;
+  float: left;
+  width: 33.333%;
+  padding: .75rem;
+  margin-bottom: 2rem;
+  border: 0;
+}
+
+body {
+  .row {
+    margin: 0;
+  }
+}
+
+#contact_form {
+  .form-group {
+    .first, .last {
+      display: inline-block;
+    }
+  }
+  #success_message {
+    display: none;
+  }
+}
+
+#header-banner {
+  h1 {
+    text-align: center;
+    min-height: 300px;
+    line-height: 300px;
+  }
+}
+
+.footer {
+  background-color: darkgrey;
+  margin-top: 20px;
+  .contact {
+    color: white;
+    padding: 20px;
+  }
+  .social {
+    padding: 20px;
+    color: white;
+    ul {
+      list-style: none;
+      li {
+        a {
+          color: $gold;
+          &:hover {
+            color: $green;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+  .footer-copyright {
+    background-color: $textcolor;
+    .main-footer {
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+  }
 }
