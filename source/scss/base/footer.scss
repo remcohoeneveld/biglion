@@ -1,0 +1,55 @@
+@import "color";
+
+.footer {
+  background-color: darkgrey;
+  .foot {
+    margin-bottom: 40px;
+    .contact {
+      color: white;
+      padding: 20px;
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li {
+          p {
+            span {
+              color: $gold;
+              font-style: italic;
+            }
+          }
+        }
+      }
+    }
+    .social {
+      padding: 20px;
+      color: white;
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li {
+          display: inline-block;
+          a {
+            background: $textcolor;
+            padding: 20px;
+            color: $gold;
+            &:hover {
+              background: $gold;
+              color: $textcolor;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  .footer-copyright {
+    background-color: $textcolor;
+    .main-footer {
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+  }
+}

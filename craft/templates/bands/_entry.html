@@ -16,9 +16,23 @@
 {% extends "_layout" %}
 
 {% block content %}
-	<article>
-		<h1>{{ entry.title }}</h1>
-		<p>Posted on {{ entry.postDate.format('F d, Y') }}</p>
-		{{ entry.body }}
-	</article>
+<div class="container bands">
+    <div class="row">
+        <div class="col-md-4">
+            <h1>{{ entry.title }}</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                {# Fetches the first image #}
+                {% set image = entry.bandsImage.first() %}
+                {% if image %}
+                <img class="avatar" src="../{{ image.url }}" alt="">
+                {% endif %}
+            </div>
+            <div class="col-md-8">
+                {{ entry.body }}
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

@@ -20,9 +20,9 @@
     <div class="row">
         <div class="col-md-12">
             {# Fetches the first image #}
-            {% set image = entry.featureImage.first() %}
+            {% set image = entry.showsImage.first() %}
             {% if image %}
-            <img class="featureImage" src="{{ image.url }}" alt="">
+            <img class="featureImage" src="../{{ image.url }}" alt="">
             {% endif %}
             <article>
                 <h1>{{ entry.title }}</h1>

@@ -1,0 +1,10 @@
+.pagination{
+  .current-page{
+    text-align: center;
+    line-height: 70px;
+    font-weight: bold;
+  }
+  .next, .prev {
+    text-align: center;
+  }
+}

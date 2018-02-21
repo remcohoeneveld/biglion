@@ -1,0 +1,53 @@
+@import "../base/color";
+
+.home {
+  .row {
+    .home-image {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      padding: 20px 0;
+    }
+    .home-header{
+      display: inline-block;
+      margin: 0;
+      padding: 20px;
+      background: $gold;
+      color: $textcolor;
+    }
+    .about-homepage {
+      h3 {
+
+      }
+      p {
+
+      }
+    }
+    .artist-homepage {
+      h3 {
+      }
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li {
+          text-align: center;
+          list-style: none;
+          padding: 10px;
+          margin: 5px 0;
+          background: $gold;
+          a{
+            line-height: 0;
+            color: $textcolor;
+          }
+          &:hover{
+            background: $textcolor;
+            a{
+              color: $gold;
+            }
+          }
+        }
+      }
+    }
+  }
+}

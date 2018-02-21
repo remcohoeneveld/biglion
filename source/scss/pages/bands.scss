@@ -1,0 +1,77 @@
+@import "../base/color";
+
+.bands {
+  .header-bands {
+    position: relative;
+    text-align: center;
+    color: white;
+    margin: 10px;
+    img {
+      max-width: 100%;
+      -moz-transition: all 0.3s;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+      -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+      filter: grayscale(100%);
+    }
+    .centered {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(0, 0, 0, 0.5);
+      width: 100%;
+      color: $gold;
+
+      -moz-transition: all 0.3s;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+    }
+    &:hover {
+      img {
+        -moz-transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+        -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+        filter: grayscale(0%);
+      }
+      .centered {
+        width: 110%;
+        font-size: 2.2rem;
+      }
+    }
+  }
+  p {
+    a {
+      background: black;
+      padding: 15px;
+      &:hover {
+        background-color: $gold;
+        border-color: $gold;
+        color: $textcolor;
+      }
+    }
+  }
+}
+
+.bands {
+  h1 {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
+    background-color: $gold;
+    min-width: 100%;
+    text-align: center;
+    color: $textcolor;
+  }
+
+  .avatar {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border: solid 5px $gold;
+    padding: 10px;
+  }
+
+}

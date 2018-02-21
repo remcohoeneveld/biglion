@@ -22,12 +22,12 @@ return array(
 	'enableCsrfProtection' => true,
 
 	// Whether "index.php" should be visible in URLs (true, false, "auto")
-	'omitScriptNameInUrls' => 'auto',
+	'omitScriptNameInUrls' => true,
 
 	// Control Panel trigger word
 	'cpTrigger' => 'admin',
 
 	// Dev Mode (see https://craftcms.com/support/dev-mode)
-	'devMode' => false,
+	'devMode' => false
 
 );

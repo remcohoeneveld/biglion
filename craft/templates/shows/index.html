@@ -21,12 +21,14 @@
     </div>
 </section>
 <div class="container shows">
+    {% paginate craft.entries.section('shows').limit(6) as pageInfo, pageEntries %}
+
     <div class="row">
-        {% for entry in craft.entries.section('shows').find() %}
+        {% for entry in pageEntries %}
         <div class="col-md-6">
             <div class="header-show">
                 {# Fetches the first image #}
-                {% set image = entry.featureImage.first() %}
+                {% set image = entry.showsImage.first() %}
                 {% if image %}
                 <img class="featureImage" src="{{ image.url }}" alt="">
                 {% endif %}
@@ -38,5 +40,25 @@
         </div>
         {% endfor %}
     </div>
+
+    {% if pageInfo.total > 6 %}
+    <div class="row pagination">
+        <div class="col-md-4 next">
+            {% if pageInfo.nextUrl %}<a href="{{ pageInfo.nextUrl }}"><i class="fas fa-caret-square-right"></i> Next
+            Page</a>{%
+            endif %}
+        </div>
+        <div class="col-md-4">
+            <p class="current-page">Current Page
+                {{ pageInfo.currentPage }}
+            </p>
+        </div>
+        <div class="col-md-4 prev">
+            {% if pageInfo.prevUrl %}<a href="{{ pageInfo.prevUrl }}"><i class="fas fa-caret-square-left"></i> Previous
+            Page</a>{%
+            endif %}
+        </div>
+    </div>
+    {% endif %}
 </div>
 {% endblock %}

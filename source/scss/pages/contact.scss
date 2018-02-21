@@ -1,0 +1,12 @@
+@import "../base/color";
+
+#contact_form {
+  .form-group {
+    .first, .last {
+      display: inline-block;
+    }
+  }
+  #success_message {
+    display: none;
+  }
+}

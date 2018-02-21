@@ -1,0 +1,52 @@
+@import "../base/color";
+
+.shows {
+  .header-show {
+    position: relative;
+    text-align: center;
+    color: white;
+    .centered {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(0, 0, 0, 0.5);
+      width: 100%;
+      a {
+        color: $gold;
+        padding: 15px;
+      }
+      &:hover {
+        background-color: $gold;
+        opacity: 0.9;
+        a{
+          color: $textcolor;
+        }
+      }
+    }
+  }
+  p {
+    a {
+      background: black;
+      padding: 15px;
+      &:hover {
+        background-color: $gold;
+        border-color: $gold;
+        color: $textcolor;
+      }
+    }
+  }
+}
+
+.show-detail{
+  padding-top: 20px;
+  article{
+    h1{
+      background: black;
+      color: $gold;
+      padding: 20px;
+      display: inline-block;
+      margin-top: 10px;
+    }
+  }
+}

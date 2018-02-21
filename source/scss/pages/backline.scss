@@ -1,0 +1,36 @@
+@import "../base/color";
+
+.backline {
+  .backline-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    padding: 20px 0;
+  }
+  .backline-body {
+
+  }
+  .backline-header {
+    display: inline-block;
+    margin: 0;
+    padding: 20px;
+    background: $gold;
+    color: $textcolor;
+  }
+  .backline-packages {
+    h3{
+      text-align: center;
+      background: $gold;
+      padding: 20px;
+      font-weight: 300;
+    }
+  }
+  .backline-media {
+    img {
+      width: 100%;
+      height: 400px;
+      object-fit: scale-down;
+      padding: 20px 0;
+    }
+  }
+}

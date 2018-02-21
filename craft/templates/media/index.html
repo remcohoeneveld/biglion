@@ -20,46 +20,15 @@
         <p class="lead text-muted">Media of Big Lion Promotions!</p>
     </div>
 </section>
-<div class="container">
-    {% for entry in craft.entries.section('media').find() %}
-    <article>
-        <h3><a href="{{ entry.url }}">{{ entry.title }}</a></h3>
-        <p>Posted on {{ entry.postDate.format('F d, Y') }}</p>
-        {{ entry.body.getPage(1) }}
-        <p><a href="{{ entry.url }}">Continue reading</a></p>
-    </article>
-    {% endfor %}
+<div class="container media">
+
     <div class="row">
-        <!-- Related Projects Row -->
-        <h3 class="my-4">Media</h3>
-
-        <div class="row">
-
-            <div class="col-md-3 col-sm-6 mb-4">
-                <a href="#">
-                    <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-                </a>
-            </div>
-
-            <div class="col-md-3 col-sm-6 mb-4">
-                <a href="#">
-                    <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-                </a>
-            </div>
-
-            <div class="col-md-3 col-sm-6 mb-4">
-                <a href="#">
-                    <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-                </a>
-            </div>
-
-            <div class="col-md-3 col-sm-6 mb-4">
-                <a href="#">
-                    <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-                </a>
-            </div>
-
+        {% for image in entry.mediaImage %}
+        <div class="col-md-6">
+            <img class="media-image" src="{{ image.url }}" alt="">
         </div>
+        {% endfor %}
     </div>
+
 </div>
 {% endblock %}

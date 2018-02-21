@@ -1,0 +1,52 @@
+@import "color";
+
+.bg-light {
+  background-color: $textcolor !important;
+  padding: 0;
+  h1 {
+    font-weight: lighter;
+    font-size: 100px;
+    max-width: 500px;
+    color: $gold;
+    line-height: 80px;
+    .promotions {
+      color: #FFDD00;
+      font-size: 75px;
+      font-weight: 400;
+    }
+  }
+  form{
+    input{
+      margin: 5px;
+    }
+    .btn-outline-success {
+      color: $gold;
+      border-color: $gold;
+      margin: 5px;
+      &:hover {
+        background-color: $gold;
+        border-color: $gold;
+        color: $textcolor;
+      }
+    }
+  }
+}
+
+.bg-dark {
+  padding: 0;
+  background-color: darkgrey !important;
+  a {
+    color: $gold;
+    padding: 15px;
+    text-align: center;
+    &:hover {
+      color: $textcolor;
+      background-color: $gold;
+    }
+  }
+  .navbar-toggler-icon {
+    color: $gold;
+    font-size: 40px;
+    margin-top: 15px;
+  }
+}

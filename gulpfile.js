@@ -15,7 +15,7 @@ config.destCSS = config.dest + 'styles';
 
 //globs
 config.globs = {
-    scss : config.src + 'scss/**/*.scss',
+    scss : config.src + 'scss/style.scss',
     js : {
         individual : config.src + 'js/individual/**/*.js',
         combined : [

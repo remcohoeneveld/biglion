@@ -13,6 +13,7 @@
 {% extends "_layout" %}
 {% set title = "Backline" %}
 
+
 {% block content %}
 <section class="jumbotron text-center">
     <div class="container">
@@ -20,47 +21,73 @@
         <p class="lead text-muted">Backline of Big Lion Promotions!</p>
     </div>
 </section>
-<div class="container">
-    {% for entry in craft.entries.section('backline').find() %}
-    <article>
-        <h3><a href="{{ entry.url }}">{{ entry.title }}</a></h3>
-        <p>Posted on {{ entry.postDate.format('F d, Y') }}</p>
-        {{ entry.body.getPage(1) }}
-        <p><a href="{{ entry.url }}">Continue reading</a></p>
-    </article>
-    {% endfor %}
 
+<div class="container backline">
+    <div class="row">
+        <div class="col-md-12">
+            {# Fetches the first image #}
+            {% set image = entry.featureImage.first() %}
+            {% if image %}
+            <img class="backline-image" src="{{ image.url }}" alt="">
+            {% endif %}
+        </div>
+        <div class="col-md-6">
+            <h1 class="backline-header">{{ entry.title }}</h1>
+        </div>
+    </div>
+
+    <div class="row backline-body">
+        <div class="col-md-12">
+            <h3 class="my-3">The backline</h3>
+            <p>{{ entry.body }}</p>
+        </div>
+    </div>
+    <div class="row backline-packages">
+        <div class="col-md-12">
+            <h3 class="my-3">Backline Packages</h3>
+        </div>
+        <div class="col-md-4">
+            <h2>Bands</h2>
+            <p>{{ entry.backlinePackageBands}}</p>
+        </div>
+        <div class="col-md-4">
+            <h2>Sounds</h2>
+            <p>{{ entry.backlinePackageSounds}}</p>
+        </div>
+        <div class="col-md-4">
+            <h2>Sounds & Bands</h2>
+            <p>{{ entry.backlinePackageBoth}}</p>
+        </div>
+    </div>
+    <div class="row backline-media">
+        <div class="col-md-12">
+            <h3 class="my-3">Media</h3>
+        </div>
+        {% for asset in entry.backlineImages %}
+        <div class="col-md-6">
+            <img src="{{ asset.getUrl() }}"/>
+        </div>
+        {% else %}
+        <div class="col-md-6">
+            <p>Nope, no images here :(</p>
+        </div>
+        {% endfor %}
+    </div>
     <div class="row">
         <!-- Related Projects Row -->
-        <h3 class="my-4">Backline</h3>
+        <h3 class="col-md-12 ">Recent shows</h3>
 
-        <div class="row">
-
-            <div class="col-md-3 col-sm-6 mb-4">
-                <a href="#">
-                    <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-                </a>
-            </div>
-
-            <div class="col-md-3 col-sm-6 mb-4">
-                <a href="#">
-                    <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-                </a>
-            </div>
-
-            <div class="col-md-3 col-sm-6 mb-4">
-                <a href="#">
-                    <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-                </a>
-            </div>
-
-            <div class="col-md-3 col-sm-6 mb-4">
-                <a href="#">
-                    <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-                </a>
-            </div>
-
+        {% for entry in craft.entries.section('shows').limit(4).find() %}
+        <div class="col-md-3 col-sm-6 mb-4">
+            <a href="{{ entry.url }}">
+                {# Fetches the first image #}
+                {% set image = entry.showsImage.first() %}
+                {% if image %}
+                <img class="featureImage" src="{{ image.url }}" alt="">
+                {% endif %}
+            </a>
         </div>
+        {% endfor %}
     </div>
 </div>
 {% endblock %}
