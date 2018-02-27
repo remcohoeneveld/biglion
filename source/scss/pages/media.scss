@@ -5,4 +5,23 @@
     width: 100%;
     padding: 20px 0;
   }
+  #carouselExampleCaptions {
+    background: black;
+    width: 100%;
+    img {
+      width: 100%;
+      height: 600px;
+      object-fit: scale-down;
+      padding: 20px 0;
+    }
+    .carousel-caption{
+      h5{
+        background-color: $gold;
+        padding: 20px;
+        opacity: 0.8;
+        color: $textcolor;
+        display: inline-block;
+      }
+    }
+  }
 }

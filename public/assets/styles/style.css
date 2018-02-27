@@ -39,6 +39,9 @@
 .bg-light {
   background-color: #000000 !important;
   padding: 0; }
+  .bg-light img {
+    width: 100%;
+    padding: 20px; }
   .bg-light h1 {
     font-weight: lighter;
     font-size: 100px;
@@ -63,13 +66,22 @@
 .bg-dark {
   padding: 0;
   background-color: darkgrey !important; }
-  .bg-dark a {
-    color: #FFDD00;
-    padding: 15px;
-    text-align: center; }
-    .bg-dark a:hover {
-      color: #000000;
+  .bg-dark .nav-item {
+    transition: all 0.3s; }
+    .bg-dark .nav-item a {
+      color: #FFDD00;
+      margin: 0 20px;
+      text-align: center;
+      font-size: 20px;
+      transition: all 0.3s; }
+    @media screen and (max-width: 920px) {
+      .bg-dark .nav-item a {
+        font-size: 15px;
+        margin: 0 15px; } }
+    .bg-dark .nav-item:hover {
       background-color: #FFDD00; }
+      .bg-dark .nav-item:hover a {
+        color: #000000; }
   .bg-dark .navbar-toggler-icon {
     color: #FFDD00;
     font-size: 40px;
@@ -87,6 +99,7 @@
   width: 100%;
   height: 400px;
   object-fit: cover;
+  object-position: top;
   padding: 20px 0; }
 
 .home .row .home-header {
@@ -106,12 +119,14 @@
     padding: 10px;
     margin: 5px 0;
     background: #FFDD00; }
-    .home .row .artist-homepage ul li a {
-      line-height: 0;
-      color: #000000; }
+    .home .row .artist-homepage ul li p {
+      line-height: initial;
+      color: #000000;
+      margin: 0;
+      padding: 10px; }
     .home .row .artist-homepage ul li:hover {
       background: #000000; }
-      .home .row .artist-homepage ul li:hover a {
+      .home .row .artist-homepage ul li:hover p {
         color: #FFDD00; }
 
 .shows .header-show {
@@ -124,14 +139,18 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background: rgba(0, 0, 0, 0.5);
-    width: 100%; }
-    .shows .header-show .centered a {
+    width: 100%;
+    height: 100%;
+    transition: all 0.7s; }
+    .shows .header-show .centered span {
       color: #FFDD00;
-      padding: 15px; }
+      padding: 15px;
+      line-height: 200px;
+      transition: all 0.7s; }
     .shows .header-show .centered:hover {
       background-color: #FFDD00;
       opacity: 0.9; }
-      .shows .header-show .centered:hover a {
+      .shows .header-show .centered:hover span {
         color: #000000; }
 
 .shows p a {
@@ -144,6 +163,10 @@
 
 .show-detail {
   padding-top: 20px; }
+  .show-detail img {
+    object-fit: cover;
+    width: 100%;
+    height: 300px; }
   .show-detail article h1 {
     background: black;
     color: #FFDD00;
@@ -172,16 +195,22 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.3);
     width: 100%;
     color: #FFDD00;
+    height: 100%;
     transition: all 0.3s; }
+    .artists .header-artist .centered span {
+      transform: translate(-50%, -50%);
+      position: absolute;
+      margin-top: 100px; }
   .artists .header-artist:hover img {
     transform: scale(1.1);
     /* Safari 6.0 - 9.0 */
     filter: grayscale(0%); }
   .artists .header-artist:hover .centered {
     width: 110%;
+    height: 110%;
     font-size: 2.2rem; }
 
 .artists p a {
@@ -192,22 +221,54 @@
     border-color: #FFDD00;
     color: #000000; }
 
-.artist h1 {
+.artist h1, .spotify h1, .youtube h1, .soundcloud h1 {
   display: inline-block;
   padding: 0;
-  margin: 0;
   margin-top: 20px;
-  background-color: #FFDD00;
   min-width: 100%;
-  text-align: center;
   color: #000000; }
 
-.artist .avatar {
+.artist .nopadding, .spotify .nopadding, .youtube .nopadding, .soundcloud .nopadding {
+  padding: 0; }
+
+.artist h3, .spotify h3, .youtube h3, .soundcloud h3 {
+  display: inline-block;
+  padding: 13px;
+  background: #FFDD00;
+  color: #000000;
+  margin: 20px 0; }
+
+.artist span, .spotify span, .youtube span, .soundcloud span {
+  background-color: darkgrey;
+  color: white;
+  padding: 5px;
+  margin: 10px 0;
+  font-style: oblique;
+  font-size: 15px;
+  font-weight: lighter; }
+
+.artist p, .spotify p, .youtube p, .soundcloud p {
+  margin-top: 10px; }
+
+.artist .shows, .artist .bands, .spotify .shows, .spotify .bands, .youtube .shows, .youtube .bands, .soundcloud .shows, .soundcloud .bands {
+  margin-top: 20px; }
+  .artist .shows h3, .artist .bands h3, .spotify .shows h3, .spotify .bands h3, .youtube .shows h3, .youtube .bands h3, .soundcloud .shows h3, .soundcloud .bands h3 {
+    background-color: #FFDD00;
+    color: #000000;
+    padding: 20px;
+    display: inline-block;
+    margin: 0 auto;
+    font-weight: 200; }
+  .artist .shows img, .artist .bands img, .spotify .shows img, .spotify .bands img, .youtube .shows img, .youtube .bands img, .soundcloud .shows img, .soundcloud .bands img {
+    padding: 10px 0; }
+
+.artist .avatar, .spotify .avatar, .youtube .avatar, .soundcloud .avatar {
   width: 100%;
   max-height: 400px;
   object-fit: cover;
-  border: solid 5px #FFDD00;
-  padding: 10px; }
+  object-position: top;
+  padding: 15px;
+  margin-top: 20px; }
 
 .bands .header-bands {
   position: relative;
@@ -224,17 +285,25 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.3);
     width: 100%;
     color: #FFDD00;
-    transition: all 0.3s; }
+    height: 100%;
+    transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s; }
+    .bands .header-bands .centered span {
+      transform: translate(-50%, -50%);
+      position: absolute;
+      margin-top: 100px; }
   .bands .header-bands:hover img {
     transform: scale(1.1);
     /* Safari 6.0 - 9.0 */
     filter: grayscale(0%); }
   .bands .header-bands:hover .centered {
     width: 110%;
-    font-size: 2.2rem; }
+    height: 110%;
+    font-size: 2rem; }
 
 .bands p a {
   background: black;
@@ -254,17 +323,32 @@
   text-align: center;
   color: #000000; }
 
+.bands .body {
+  margin: 20px 0; }
+
+.bands .artists h3, .bands .shows h3 {
+  background-color: #FFDD00;
+  color: #000000;
+  padding: 20px;
+  display: inline-block;
+  margin: 0 auto;
+  font-weight: 200; }
+
+.bands .artists img, .bands .shows img {
+  margin: 20px 0; }
+
 .bands .avatar {
   width: 100%;
   max-height: 400px;
-  object-fit: cover;
+  object-fit: scale-down;
   border: solid 5px #FFDD00;
-  padding: 10px; }
+  background: transparent; }
 
 .backline .backline-image {
   width: 100%;
   height: 400px;
   object-fit: cover;
+  object-position: center;
   padding: 20px 0; }
 
 .backline .backline-header {
@@ -280,15 +364,54 @@
   padding: 20px;
   font-weight: 300; }
 
-.backline .backline-media img {
-  width: 100%;
-  height: 400px;
-  object-fit: scale-down;
-  padding: 20px 0; }
+.backline .backline-media h3 {
+  display: inline-block;
+  margin: 0;
+  padding: 20px;
+  background: #FFDD00;
+  color: #000000;
+  float: right; }
+
+.backline .backline-media #carouselExampleCaptions {
+  background: darkgrey; }
+  .backline .backline-media #carouselExampleCaptions img {
+    width: 100%;
+    height: 400px;
+    object-fit: scale-down;
+    padding: 20px 0; }
+  .backline .backline-media #carouselExampleCaptions .carousel-caption h5 {
+    background-color: #FFDD00;
+    padding: 20px;
+    opacity: 0.8;
+    color: #000000;
+    display: inline-block; }
+
+.backline .recent-shows h3 {
+  display: inline-block;
+  margin: 0;
+  padding: 20px;
+  background: #FFDD00;
+  color: #000000;
+  float: left; }
 
 .media .media-image {
   width: 100%;
   padding: 20px 0; }
+
+.media #carouselExampleCaptions {
+  background: black;
+  width: 100%; }
+  .media #carouselExampleCaptions img {
+    width: 100%;
+    height: 600px;
+    object-fit: scale-down;
+    padding: 20px 0; }
+  .media #carouselExampleCaptions .carousel-caption h5 {
+    background-color: #FFDD00;
+    padding: 20px;
+    opacity: 0.8;
+    color: #000000;
+    display: inline-block; }
 
 body {
   background: #000000; }
@@ -297,6 +420,10 @@ body {
 
 #content {
   background: white;
+  padding-bottom: 50px; }
+
+#media-content {
+  background: #000000;
   padding-bottom: 50px; }
 
 a {
@@ -308,5 +435,9 @@ a {
 
 .featureImage {
   object-fit: cover;
+  object-position: top;
   width: 100%;
-  height: 200px; }
+  height: 200px;
+  transition: all 0.3s; }
+  .featureImage:hover {
+    transform: scale(1.1); }

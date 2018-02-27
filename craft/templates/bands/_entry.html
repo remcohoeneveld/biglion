@@ -1,17 +1,17 @@
 {#
- # News entry template
- # -------------------
- #
- # This template gets loaded whenever a News entry’s URL is
- # requested. That’s because the News section’s Template setting is
- # set to “news/_entry”, the path to this template.
- #
- # When this template is loaded, it will already have an ‘entry’
- # variable, set to the requested News entry.
- #
- # See this page for more details on how Craft routes requests:
- # http://craftcms.com/docs/routing
- #}
+# News entry template
+# -------------------
+#
+# This template gets loaded whenever a News entry’s URL is
+# requested. That’s because the News section’s Template setting is
+# set to “news/_entry”, the path to this template.
+#
+# When this template is loaded, it will already have an ‘entry’
+# variable, set to the requested News entry.
+#
+# See this page for more details on how Craft routes requests:
+# http://craftcms.com/docs/routing
+#}
 
 {% extends "_layout" %}
 
@@ -22,16 +22,96 @@
             <h1>{{ entry.title }}</h1>
         </div>
         <div class="row">
-            <div class="col-md-4">
+            {% if entry.spotifyplaylistlink | length %}
+            <div class="col-md-8">
                 {# Fetches the first image #}
                 {% set image = entry.bandsImage.first() %}
                 {% if image %}
                 <img class="avatar" src="../{{ image.url }}" alt="">
                 {% endif %}
             </div>
-            <div class="col-md-8">
-                {{ entry.body }}
+
+
+            <div class="col-md-4">
+                <div class="row spotify">
+                    <div class="col-md-12">
+                        <h3>Spotify</h3>
+                    </div>
+                    <div class="col-md-12">
+                        <iframe src="{{entry.spotifyplaylistlink|slice(0, 25)}}embed/{{entry.spotifyplaylistlink|slice(25, 300)}}"
+                                width="75%" height="300" frameborder="0" allowtransparency="true"></iframe>
+                    </div>
+                </div>
+
             </div>
+            {% else %}
+            <div class="col-md-12">
+                {# Fetches the first image #}
+                {% set image = entry.bandsImage.first() %}
+                {% if image %}
+                <img class="avatar" src="../{{ image.url }}" alt="">
+                {% endif %}
+            </div>
+
+            <div class="col-md-12">
+                <div class="row body">
+                    <div class="col-md-12">
+                        {{ entry.body }}
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+
+            <div class="col-md-12">
+                <div class="row body">
+                    <div class="col-md-12">
+                        {{ entry.body }}
+                    </div>
+                </div>
+            </div>
+
+            {% set artists = entry.bandsArtists %}
+            {% if artists | length %}
+            <div class="col-md-12">
+                <div class="row artists">
+                    <div class="col-md-12">
+                        <h3>Artists</h3>
+                    </div>
+                    {% for entry in artists %}
+                    {% set image = entry.artistImage.first() %}
+                    {% if image %}
+                    <div class="col-md-4">
+                        <a href="{{ entry.url }}">
+                            <img class="featureImage" src="../{{ image.url }}" alt="">
+                        </a>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+
+            {% set shows = entry.bandsShows %}
+            {% if shows | length %}
+            <div class="col-md-12">
+                <div class="row artists">
+                    <div class="col-md-12">
+                        <h3>Shows</h3>
+                    </div>
+                    {% for entry in shows %}
+                    {% set image = entry.showsImage.first() %}
+                    {% if image %}
+                    <div class="col-md-4">
+                        <a href="{{ entry.url }}">
+                            <img class="featureImage" src="../{{ image.url }}" alt="">
+                        </a>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+
         </div>
     </div>
 </div>

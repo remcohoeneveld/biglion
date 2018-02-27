@@ -1,22 +1,3 @@
-{#
-# Homepage template
-# ---------------
-#
-# When this template gets loaded, it will be because someone has accessed
-# http://yoursite.com/ (without any URI). Craft checks to see if you have
-# a Single section set to be the Homepage (as you do, by default), and
-# loads the section’s Template (this file). A special ‘entry’ variable
-# will already be set for you, assigned to the Homepage entry.
-#
-# It's worth noting that even if you didn't have a Homepage Single section,
-# as long as this template remains at craft/templates/index.html, it
-# would still be the one to get loaded when accessing http://yoursite.com/,
-# albeit without an ‘entry’ variable already set for you.
-#
-# See this page for more details on how Craft routes requests:
-# http://craftcms.com/docs/routing
-#}
-
 {% extends "_layout" %}
 
 {% block content %}
@@ -29,21 +10,21 @@
             <img class="home-image" src="{{ image.url }}" alt="">
             {% endif %}
         </div>
-        <div class="col-md-6">
-            <h1 class="home-header">{{ entry.title }}</h1>
-        </div>
     </div>
 
     <div class="row">
-        <div class="col-md-8 about-homepage">
-            <h3 class="my-3">About Big Lion</h3>
-            <p>{{ entry.body }}</p>
+        <div class="col-md-9">
+            <h1 class="home-header">{{ entry.title }}</h1>
+            <div class="about-homepage">
+                <h3 class="my-3">About Big Lion</h3>
+                <p>{{ entry.body }}</p>
+            </div>
         </div>
         <div class="col-md-3 artist-homepage">
-            <h3 class="my-3">Artists</h3>
+            <h4 class="my-3">Recently added artists</h4>
             <ul>
-                {% for entry in craft.entries.section('artists').limit(3).find() %}
-                <li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
+                {% for entry in craft.entries.section('artists').limit(4).find() %}
+                <a href="{{ entry.url }}"><li><p>{{ entry.title }}</p></li></a>
                 {% endfor %}
             </ul>
         </div>

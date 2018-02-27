@@ -18,20 +18,67 @@
 {% block content %}
 <div class="container artist">
     <div class="row">
-        <div class="col-md-4">
-            <h1>{{ entry.title }}</h1>
-        </div>
         <div class="row">
+            <div class="col-md-8">
+                <div class="row body">
+                    <div class="col-md-12">
+
+                        <h1>{{ entry.title }}</h1> {% for prof in entry.profession %}
+                        <span>{{prof}}</span>
+                        {% endfor %}
+
+                        {{ entry.body }}
+                    </div>
+                </div>
+
+                {% set shows = entry.artistShow %}
+                {% if shows | length %}
+                <div class="row shows">
+                    <div class="col-md-12">
+                        <h3>Shows</h3>
+                    </div>
+                    {% for entry in shows %}
+                    {% set image = entry.showsImage.first() %}
+                    {% if image %}
+                    <div class="col-md-6">
+                        <a href="{{ entry.url }}">
+                            <img class="featureImage" src="../{{ image.url }}" alt="">
+                        </a>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+                {% endif %}
+
+            </div>
             <div class="col-md-4">
                 {# Fetches the first image #}
                 {% set image = entry.artistImage.first() %}
                 {% if image %}
                 <img class="avatar" src="../{{ image.url }}" alt="">
                 {% endif %}
+
+                {% set bands = entry.artistBand %}
+                {% if bands | length %}
+                <div class="row bands">
+                    <div class="col-md-12">
+                        <h3>Bands</h3>
+                    </div>
+                    {% for entry in bands %}
+                    {% set image = entry.bandsImage.first() %}
+                    {% if image %}
+                    <div class="col-md-12">
+                        <a href="{{ entry.url }}">
+                            <img class="featureImage" src="../{{ image.url }}" alt="">
+                        </a>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+                {% endif %}
+
             </div>
-            <div class="col-md-8">
-                {{ entry.body }}
-            </div>
+
         </div>
     </div>
 </div>

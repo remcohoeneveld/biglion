@@ -30,9 +30,11 @@
                 {# Fetches the first image #}
                 {% set image = entry.showsImage.first() %}
                 {% if image %}
-                <img class="featureImage" src="{{ image.url }}" alt="">
-                {% endif %}
-                <h3 class="centered"><a href="{{ entry.url }}">{{ entry.title }}</a></h3>
+                <a href="{{ entry.url }}">
+                    <img class="featureImage" src="{{ image.url }}" alt="">
+                    {% endif %}
+                    <h3 class="centered"><span>{{ entry.title }}</span></h3>
+                </a>
             </div>
             <p>Posted on {{ entry.postDate.format('F d, Y') }}</p>
             {{ entry.body.getPage(1)|striptags|slice(0,150)|default('Read more') }}...
