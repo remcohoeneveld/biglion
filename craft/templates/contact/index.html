@@ -20,78 +20,61 @@
         <p class="lead text-muted">Contact Big Lion Events Today!</p>
     </div>
 </section>
+
 <div class="container">
-    <div class="row">
-        <div class="col-md-6 col-centered">
-            <form class="well form-horizontal" action=" " method="post" id="contact_form">
-                <fieldset>
+    <div class="section" id="contact">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="contact-content">
+                    {% macro errorList(errors) %}
+                    {% if errors %}
+                    <ul class="errors">
+                        {% for error in errors %}
+                        <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                    {% endmacro %}
 
-                    {{ getCsrfInput() }}
+                    {% from _self import errorList %}
 
-                    <!-- Text input-->
+                    <form class="form" method="post" id='contact-form' action="" accept-charset="UTF-8">
+                        {{ getCsrfInput() }}
+                        <input type="hidden" name="action" value="contactForm/sendMessage">
 
-                    <div class="form-group">
-                        <div class="first">
-                            <label class="col-md-12 control-label">First Name</label>
-                            <div class="col-md-12 inputGroupContainer">
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                    <input name="first_name" placeholder="First Name" class="form-control" type="text">
-                                </div>
+                        <div class="contact-form">
+                            <h3><label for="fromName">Your Name</label></h3>
+                            <input id="fromName" type="text" name="fromName"
+                                   value="{% if message is defined %}{{ message.fromName }}{% endif %}">
+                            {{ message is defined and message ? errorList(message.getErrors('fromName')) }}
+
+                            <h3><label for="fromEmail">Your Email</label></h3>
+                            <input id="fromEmail" type="email" name="fromEmail"
+                                   value="{% if message is defined %}{{ message.fromEmail }}{% endif %}">
+                            {{ message is defined and message ? errorList(message.getErrors('fromEmail')) }}
+
+                            <h3><label for="subject">Subject</label></h3>
+                            <input id="subject" type="text" name="subject"
+                                   value="{% if message is defined %}{{ message.subject }}{% endif %}">
+                            {{ message is defined and message ? errorList(message.getErrors('subject')) }}
+
+                            <h3><label for="message">Message</label></h3>
+                            <textarea rows="10" cols="40" id="message" name="message">{% if message is defined %}{{ message.message }}{% endif %}</textarea>
+                            {{ message is defined and message ? errorList(message.getErrors('message')) }}
+
+                            <div id="mail-success" class="success">
+                                Thank you. Your Mail On His Way :)
+                            </div>
+                            <div id="mail-fail" class="error">
+                                Sorry, an error occurred. Try later :(
                             </div>
                         </div>
-                        <div class="last">
-                            <label class="col-md-12 control-label">Last Name</label>
-                            <div class="col-md-12 inputGroupContainer">
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                    <input name="last_name" placeholder="Last Name" class="form-control" type="text">
-                                </div>
-                            </div>
+                        <div class="butt-msg text-center">
+                            <input type="submit" value="Send message">
                         </div>
-                    </div>
-
-                    <!-- Text input-->
-                    <div class="form-group">
-                        <label class="col-md-12 control-label">E-Mail</label>
-                        <div class="col-md-12 inputGroupContainer">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                                <input name="email" placeholder="E-Mail Address" class="form-control" type="text">
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Text area -->
-
-                    <div class="form-group">
-                        <label class="col-md-4 control-label">Message</label>
-                        <div class="col-md-4 inputGroupContainer">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-                                <textarea class="form-control" name="comment" placeholder="Your message"></textarea>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Success message -->
-                    <div class="alert alert-success" role="alert" id="success_message">Success <i
-                            class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you
-                        shortly.
-                    </div>
-
-                    <!-- Button -->
-                    <div class="form-group">
-                        <label class="col-md-4 control-label"></label>
-                        <div class="col-md-4">
-                            <button type="submit" class="btn btn-warning">Send Message<span
-                                    class="glyphicon glyphicon-send"></span>
-                            </button>
-                        </div>
-                    </div>
-
-                </fieldset>
-            </form>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 </div>

@@ -1,23 +1,92 @@
 @import "../base/color";
 
-#contact_form {
-  .first, .last{
-    display: inline-block;
-    float: left;
+#contact {
+  background-color: $white;
+  .contact-content {
+    margin-top: 3em
   }
-  .form-group{
-    margin: 0;
-    .input-group{
-      input, textarea{
-        width: 100%;
-        min-width: 220px;
-        max-width: 220px;
-        margin: 10px 0;
-      }
+  .contact-form {
 
+    label{
+      font-weight: 300;
+      font-size: 21px;
+    }
+
+    input {
+      display: block;
+      margin-bottom: 40px;
+      border: 0;
+      background: 0 0;
+      border-bottom: 1px solid #ddd;
+      font-size: 16px;
+      width: 100%;
+      outline-color: transparent;
+      &:focus {
+        border-color: black;
+        -webkit-transition: all .4s ease-in-out;
+        -moz-transition: all .4s ease-in-out;
+        -o-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out
+      }
+    }
+    textarea {
+      height: 120px;
+      resize: none;
+      display: block;
+      width: 100%;
+      font-size: 16px;
+      background-color: transparent;
+      border: 0;
+      border-bottom: 1px solid #ddd;
+      outline-color: transparent;
+      &:focus {
+        border-color: black;
+        -webkit-transition: all .4s ease-in-out;
+        -moz-transition: all .4s ease-in-out;
+        -o-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out
+      }
     }
   }
-  #success_message {
-    display: none;
+  form {
+    padding: 0 60px;
+    .butt-msg {
+      margin-top: 40px;
+      input {
+        text-decoration: none;
+        color: white;
+        background-color: black;
+        font-size: 25px;
+        padding: 10px 20px;
+        border: 1px solid black;
+        transition: all .3s ease-in-out;
+        -webkit-transition: all .3s ease-in-out;
+        -moz-transition: all .3s ease-in-out;
+        -o-transition: all .3s ease-in-out;
+        &:hover {
+          border: 1px solid black;
+          background-color: transparent;
+          color: black
+        }
+      }
+    }
   }
+}
+
+.error {
+  display: none;
+  padding: 10px;
+  color: #d8000c;
+  border-radius: 4px;
+  font-size: 13px;
+  background-color: #ffbaba
+}
+
+.success {
+  background-color: #00c7fc;
+  border-radius: 4px;
+  color: $white;
+  display: none;
+  font-size: 13px;
+  padding: 10px
 }

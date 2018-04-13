@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('#contact_form').bootstrapValidator({
+    $('#contact-form').bootstrapValidator({
         // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
         feedbackIcons: {
             valid: 'glyphicon glyphicon-ok',
@@ -102,7 +102,7 @@ $(document).ready(function() {
     })
         .on('success.form.bv', function(e) {
             $('#success_message').slideDown({ opacity: "show" }, "slow") // Do something ...
-            $('#contact_form').data('bootstrapValidator').resetForm();
+            $('#contact-form').data('bootstrapValidator').resetForm();
 
             // Prevent form submission
             e.preventDefault();

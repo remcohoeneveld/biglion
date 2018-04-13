@@ -1,2 +1,5 @@
 {
+    "require": {
+        "craftcms/contact-form": "^2.1"
+    }
 }

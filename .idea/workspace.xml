@@ -2,279 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72d79a01-5002-4393-8778-b35587a9b1aa" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/craft/plugins/cheatsheet/CheatSheetPlugin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/cheatsheet/controllers/CheatSheet_RoutesController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/cheatsheet/resources/css/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/cheatsheet/resources/js/scripts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/cheatsheet/services/CheatSheet_FieldsService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/cheatsheet/templates/frontEnd/_includes/_coreMacros/codeBlock.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/cheatsheet/templates/frontEnd/_includes/_coreMacros/fields.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/cheatsheet/templates/frontEnd/_includes/_coreMacros/strRepeat.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/cheatsheet/templates/frontEnd/_includes/_fieldMacros/Assets.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/cheatsheet/templates/frontEnd/_includes/_fieldMacros/Categories.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/cheatsheet/templates/frontEnd/_includes/_fieldMacros/Checkboxes.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/cheatsheet/templates/frontEnd/_includes/_fieldMacros/Color.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/cheatsheet/templates/frontEnd/_includes/_fieldMacros/Date.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/cheatsheet/templates/frontEnd/_includes/_fieldMacros/Dropdown.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/cheatsheet/templates/frontEnd/_includes/_fieldMacros/Entries.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/cheatsheet/templates/frontEnd/_includes/_fieldMacros/Lightswitch.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/cheatsheet/templates/frontEnd/_includes/_fieldMacros/Matrix.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/cheatsheet/templates/frontEnd/_includes/_fieldMacros/MultiSelect.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/cheatsheet/templates/frontEnd/_includes/_fieldMacros/Number.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/cheatsheet/templates/frontEnd/_includes/_fieldMacros/PlainText.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/cheatsheet/templates/frontEnd/_includes/_fieldMacros/PositionSelect.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/cheatsheet/templates/frontEnd/_includes/_fieldMacros/RadioButtons.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/cheatsheet/templates/frontEnd/_includes/_fieldMacros/RichText.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/cheatsheet/templates/frontEnd/_includes/_fieldMacros/SmartMap_Address.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/cheatsheet/templates/frontEnd/_includes/_fieldMacros/Table.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/cheatsheet/templates/frontEnd/_includes/_fieldMacros/Tags.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/cheatsheet/templates/frontEnd/_includes/_fieldMacros/Users.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/cheatsheet/templates/frontEnd/_includes/_fieldMacros/_template.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/cheatsheet/templates/frontEnd/_includes/fieldMacros.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/cheatsheet/templates/frontEnd/cheatsheet.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/cheatsheet/templates/settings/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/craftysocialshare/CraftySocialSharePlugin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/craftysocialshare/twigextensions/CraftySocialShareTwigExtension.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/fruitlinkit/FruitLinkItPlugin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/fruitlinkit/fieldtypes/FruitLinkItFieldType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/fruitlinkit/migrations/m160208_010101_FruitLinkIt_UpdateExistingLinkItFields.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/fruitlinkit/models/FruitLinkIt_LinkModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/fruitlinkit/models/FruitLinkIt_LinkSettingsModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/fruitlinkit/resources/css/linkit.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/fruitlinkit/resources/js/FruitLinkIt.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/fruitlinkit/services/FruitLinkItService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/fruitlinkit/templates/_fieldtype/input.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/fruitlinkit/templates/_fieldtype/settings.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/SearchPlusPlugin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/composer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/composer.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/controllers/SearchPlus_AlgoliaController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/controllers/SearchPlus_BaseController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/controllers/SearchPlus_BaseCpController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/controllers/SearchPlus_LogController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/controllers/SearchPlus_RegistrationController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/controllers/SearchPlus_SettingsController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/etc/SearchPlus_Edition.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/etc/sources/SearchPlus_BaseIndexSource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/etc/sources/SearchPlus_CategoryIndexSource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/etc/sources/SearchPlus_CommerceProductIndexSource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/etc/sources/SearchPlus_EntryIndexSource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/migrations/m160307_000000_searchPlus_add_index_item_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/migrations/m160829_000000_searchPlus_updateLogTableSchema.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/migrations/m160923_000000_searchPlus_updateQueueColumnType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/migrations/m161020_searchPlus_updateLicense.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/models/SearchPlus_AlgoliaMapModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/models/SearchPlus_IndexItemModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/models/SearchPlus_LicenseModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/models/SearchPlus_LogModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/records/SearchPlus_AlgoliaMapRecord.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/records/SearchPlus_IndexItemRecord.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/records/SearchPlus_LogRecord.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/resources/config.codekit" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/resources/cp/css/registration.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/resources/cp/css/searchplus.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/resources/cp/js/SearchPlusRegistrationForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/resources/cp/js/searchplus.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/resources/css/jquery.textcomplete.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/resources/icon-mask.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/resources/icon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/resources/img/beta-icon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/resources/img/invalid-icon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/resources/img/valid-icon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/resources/js/algoliasearch.helper.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/resources/js/algoliasearch.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/resources/js/autocomplete.jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/resources/js/autocomplete.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/resources/js/hogan.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/resources/js/jquery.textcomplete.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/resources/js/jquery.textcomplete.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/resources/js/min/searchplus-min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/resources/js/searchplus-combined.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/resources/js/searchplus-combined.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/resources/js/searchplus.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/resources/js/searchplus.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/resources/js/typeahead.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/services/SearchPlusService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/services/SearchPlus_AlgoliaMapService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/services/SearchPlus_AlgoliaService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/services/SearchPlus_ElementsService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/services/SearchPlus_LicenseService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/services/SearchPlus_LogService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/services/SearchPlus_PopulationService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/tasks/SearchPlus_PopulationTask.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/tasks/SearchPlus_PopulationTransferTask.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/templates/_includes/indexTable.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/templates/_includes/logTable.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/templates/_includes/macros.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/templates/_includes/macros/fields.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/templates/_includes/mappingField.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/templates/_includes/pagination.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/templates/_includes/unconnectedIndexTable.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/templates/_layouts/cp.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/templates/_layouts/settings.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/templates/_settings.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/templates/algolia/_editIndex.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/templates/algolia/_index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/templates/algolia/_manageIndex.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/templates/algolia/_manageIndexAdmin.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/templates/algolia/_mappingTest.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/templates/algolia/_mappings.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/templates/algolia/_populate.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/templates/algolia/_setup.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/templates/algolia/_unconnected.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/templates/log/_index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/templates/log/_view.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/templates/settings/_license.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/templates/settings/_logs.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/templates/settings/license/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/variables/SearchPlusVariable.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/vendor/algolia/algoliasearch-client-php/.php_cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/vendor/algolia/algoliasearch-client-php/.styleci.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/vendor/algolia/algoliasearch-client-php/LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/vendor/algolia/algoliasearch-client-php/algoliasearch.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/vendor/algolia/algoliasearch-client-php/composer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/vendor/algolia/algoliasearch-client-php/resources/ca-bundle.crt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/vendor/algolia/algoliasearch-client-php/src/AlgoliaSearch/AlgoliaConnectionException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/vendor/algolia/algoliasearch-client-php/src/AlgoliaSearch/AlgoliaException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/vendor/algolia/algoliasearch-client-php/src/AlgoliaSearch/Client.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/vendor/algolia/algoliasearch-client-php/src/AlgoliaSearch/ClientContext.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/vendor/algolia/algoliasearch-client-php/src/AlgoliaSearch/FailingHostsCache.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/vendor/algolia/algoliasearch-client-php/src/AlgoliaSearch/FileFailingHostsCache.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/vendor/algolia/algoliasearch-client-php/src/AlgoliaSearch/InMemoryFailingHostsCache.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/vendor/algolia/algoliasearch-client-php/src/AlgoliaSearch/Index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/vendor/algolia/algoliasearch-client-php/src/AlgoliaSearch/IndexBrowser.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/vendor/algolia/algoliasearch-client-php/src/AlgoliaSearch/Json.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/vendor/algolia/algoliasearch-client-php/src/AlgoliaSearch/PlacesIndex.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/vendor/algolia/algoliasearch-client-php/src/AlgoliaSearch/SynonymType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/vendor/algolia/algoliasearch-client-php/src/AlgoliaSearch/Version.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/vendor/autoload.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/vendor/composer/ClassLoader.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/vendor/composer/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/vendor/composer/autoload_classmap.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/vendor/composer/autoload_namespaces.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/vendor/composer/autoload_psr4.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/vendor/composer/autoload_real.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/vendor/composer/autoload_static.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/searchplus/vendor/composer/installed.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/templates/search/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/favicon/android-icon-144x144.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/favicon/android-icon-192x192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/favicon/android-icon-36x36.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/favicon/android-icon-48x48.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/favicon/android-icon-72x72.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/favicon/android-icon-96x96.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/favicon/apple-icon-114x114.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/favicon/apple-icon-120x120.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/favicon/apple-icon-144x144.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/favicon/apple-icon-152x152.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/favicon/apple-icon-180x180.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/favicon/apple-icon-57x57.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/favicon/apple-icon-60x60.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/favicon/apple-icon-72x72.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/favicon/apple-icon-76x76.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/favicon/apple-icon-precomposed.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/favicon/apple-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/favicon/browserconfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/favicon/favicon-16x16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/favicon/favicon-32x32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/favicon/favicon-96x96.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/favicon/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/favicon/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/favicon/ms-icon-144x144.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/favicon/ms-icon-150x150.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/favicon/ms-icon-310x310.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/favicon/ms-icon-70x70.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/js/combined/site/search.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/js/individual/search.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/scss/base/social.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/craft/plugins/contactform/ContactFormPlugin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/craft/plugins/contactform/controllers/ContactFormController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/craft/plugins/contactform/events/ContactFormEvent.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/craft/plugins/contactform/events/ContactFormMessageEvent.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/craft/plugins/contactform/models/ContactFormModel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/craft/plugins/contactform/services/ContactFormService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/craft/plugins/contactform/templates/_settings.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/js/combined/site/thanks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/biglionevents.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/biglionevents.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/craft/app/Info.php" beforeDir="false" afterPath="$PROJECT_DIR$/craft/app/Info.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/craft/app/assetsourcetypes/BaseAssetSourceType.php" beforeDir="false" afterPath="$PROJECT_DIR$/craft/app/assetsourcetypes/BaseAssetSourceType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/craft/app/controllers/AppController.php" beforeDir="false" afterPath="$PROJECT_DIR$/craft/app/controllers/AppController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/craft/app/fieldtypes/MatrixFieldType.php" beforeDir="false" afterPath="$PROJECT_DIR$/craft/app/fieldtypes/MatrixFieldType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/craft/app/fieldtypes/RichTextFieldType.php" beforeDir="false" afterPath="$PROJECT_DIR$/craft/app/fieldtypes/RichTextFieldType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/craft/app/helpers/AppHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/craft/app/helpers/AppHelper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/craft/app/helpers/CpHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/craft/app/helpers/CpHelper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/craft/app/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/craft/app/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/craft/app/models/MatrixBlockModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/craft/app/models/MatrixBlockModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/craft/app/models/UrlModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/craft/app/models/UrlModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/craft/app/resources/css/craft.css" beforeDir="false" afterPath="$PROJECT_DIR$/craft/app/resources/css/craft.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/craft/app/resources/css/craft.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/craft/app/resources/css/craft.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/craft/app/resources/css/user-permissions.css" beforeDir="false" afterPath="$PROJECT_DIR$/craft/app/resources/css/user-permissions.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/craft/app/resources/css/user-permissions.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/craft/app/resources/css/user-permissions.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/craft/app/resources/js/RichTextInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/craft/app/resources/js/RichTextInput.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/craft/app/resources/js/compressed/RichTextInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/craft/app/resources/js/compressed/RichTextInput.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/craft/app/resources/js/compressed/RichTextInput.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/craft/app/resources/js/compressed/RichTextInput.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/craft/app/resources/js/compressed/cp.js" beforeDir="false" afterPath="$PROJECT_DIR$/craft/app/resources/js/compressed/cp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/craft/app/resources/js/compressed/cp.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/craft/app/resources/js/compressed/cp.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/craft/app/resources/js/compressed/craft.js" beforeDir="false" afterPath="$PROJECT_DIR$/craft/app/resources/js/compressed/craft.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/craft/app/resources/js/compressed/craft.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/craft/app/resources/js/compressed/craft.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/craft/app/resources/js/cp.js" beforeDir="false" afterPath="$PROJECT_DIR$/craft/app/resources/js/cp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/craft/app/resources/js/craft.js" beforeDir="false" afterPath="$PROJECT_DIR$/craft/app/resources/js/craft.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/craft/app/resources/js/craft/LightSwitch.js" beforeDir="false" afterPath="$PROJECT_DIR$/craft/app/resources/js/craft/LightSwitch.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/craft/app/resources/lib/redactor/redactor.css" beforeDir="false" afterPath="$PROJECT_DIR$/craft/app/resources/lib/redactor/redactor.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/craft/app/resources/lib/redactor/redactor.js" beforeDir="false" afterPath="$PROJECT_DIR$/craft/app/resources/lib/redactor/redactor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/craft/app/resources/lib/redactor/redactor.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/craft/app/resources/lib/redactor/redactor.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/craft/app/resources/lib/redactor/redactor.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/craft/app/resources/lib/redactor/redactor.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/craft/app/resources/lib/redactor/redactor.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/craft/app/resources/lib/redactor/redactor.min.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/craft/app/resources/sass/craft.scss" beforeDir="false" afterPath="$PROJECT_DIR$/craft/app/resources/sass/craft.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/craft/app/resources/sass/user-permissions.scss" beforeDir="false" afterPath="$PROJECT_DIR$/craft/app/resources/sass/user-permissions.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/craft/app/services/AssetsService.php" beforeDir="false" afterPath="$PROJECT_DIR$/craft/app/services/AssetsService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/craft/app/services/EmailService.php" beforeDir="false" afterPath="$PROJECT_DIR$/craft/app/services/EmailService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/craft/app/services/EtService.php" beforeDir="false" afterPath="$PROJECT_DIR$/craft/app/services/EtService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/craft/app/services/HttpRequestService.php" beforeDir="false" afterPath="$PROJECT_DIR$/craft/app/services/HttpRequestService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/craft/app/services/MatrixService.php" beforeDir="false" afterPath="$PROJECT_DIR$/craft/app/services/MatrixService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/craft/app/services/TemplatesService.php" beforeDir="false" afterPath="$PROJECT_DIR$/craft/app/services/TemplatesService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/craft/app/services/UserSessionService.php" beforeDir="false" afterPath="$PROJECT_DIR$/craft/app/services/UserSessionService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/craft/app/templates/_upgrademodal.html" beforeDir="false" afterPath="$PROJECT_DIR$/craft/app/templates/_upgrademodal.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/craft/app/translations/nl.php" beforeDir="false" afterPath="$PROJECT_DIR$/craft/app/translations/nl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/craft/app/vendor/autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/craft/app/vendor/autoload.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/craft/app/vendor/composer/ClassLoader.php" beforeDir="false" afterPath="$PROJECT_DIR$/craft/app/vendor/composer/ClassLoader.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/craft/app/vendor/composer/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/craft/app/vendor/composer/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/craft/app/vendor/composer/autoload_real.php" beforeDir="false" afterPath="$PROJECT_DIR$/craft/app/vendor/composer/autoload_real.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/craft/app/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/craft/app/vendor/composer/autoload_static.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/craft/app/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/craft/app/vendor/composer/installed.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/craft/config/general.php" beforeDir="false" afterPath="$PROJECT_DIR$/craft/config/general.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/craft/templates/_layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/craft/templates/_layout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/craft/templates/artists/_entry.html" beforeDir="false" afterPath="$PROJECT_DIR$/craft/templates/artists/_entry.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/craft/templates/artists/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/craft/templates/artists/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/craft/templates/backline/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/craft/templates/backline/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/craft/templates/bands/_entry.html" beforeDir="false" afterPath="$PROJECT_DIR$/craft/templates/bands/_entry.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/craft/templates/bands/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/craft/templates/bands/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/craft/templates/contact/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/craft/templates/contact/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/craft/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/craft/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/craft/templates/media/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/craft/templates/media/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/craft/templates/news/_entry.html" beforeDir="false" afterPath="$PROJECT_DIR$/craft/templates/news/_entry.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/craft/templates/news/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/craft/templates/news/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/craft/templates/shows/_entry.html" beforeDir="false" afterPath="$PROJECT_DIR$/craft/templates/shows/_entry.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/craft/templates/shows/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/craft/templates/shows/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/js/bootstrap/bootstrap.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/source/js/individual/bootstrap/bootstrap.bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/js/bootstrap/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/source/js/individual/bootstrap/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/js/carousel.js" beforeDir="false" afterPath="$PROJECT_DIR$/source/js/combined/site/carousel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/js/carousel.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/js/contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/source/js/combined/site/contact.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/js/contact.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/js/jquery/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/source/js/individual/jquery/jquery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/js/jquery/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/source/js/individual/jquery/jquery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/js/scripts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/scripts.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/js/scripts.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/assets/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/styles/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/assets/styles/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/styles/style.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/assets/styles/style.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/styles/style.min.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/backline/AER-Compact60-150x150.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/backline/marshall-2203.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/backline/marshall-2204-150x150.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/scss/base/color.scss" beforeDir="false" afterPath="$PROJECT_DIR$/source/scss/base/color.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/scss/base/footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/source/scss/base/footer.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/scss/base/navbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/source/scss/base/navbar.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/scss/pages/artists.scss" beforeDir="false" afterPath="$PROJECT_DIR$/source/scss/pages/artists.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/scss/pages/backline.scss" beforeDir="false" afterPath="$PROJECT_DIR$/source/scss/pages/backline.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/scss/pages/bands.scss" beforeDir="false" afterPath="$PROJECT_DIR$/source/scss/pages/bands.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/js/combined/site/contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/source/js/combined/site/contact.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/scss/pages/contact.scss" beforeDir="false" afterPath="$PROJECT_DIR$/source/scss/pages/contact.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/scss/pages/home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/source/scss/pages/home.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/scss/pages/media.scss" beforeDir="false" afterPath="$PROJECT_DIR$/source/scss/pages/media.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/scss/pages/shows.scss" beforeDir="false" afterPath="$PROJECT_DIR$/source/scss/pages/shows.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/source/scss/style.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -288,11 +36,56 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="_layout.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="_layout.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/craft/templates/_layout.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="538">
-              <caret line="165" column="22" lean-forward="true" selection-start-line="165" selection-start-column="22" selection-end-line="165" selection-end-column="22" />
+            <state relative-caret-position="1620">
+              <caret line="108" column="21" selection-start-line="108" selection-start-column="21" selection-end-line="108" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/craft/templates/contact/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="269">
+              <caret line="41" column="44" lean-forward="true" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="contact.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/scss/pages/contact.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="137">
+              <caret line="44" column="45" selection-start-line="44" selection-start-column="45" selection-end-line="44" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="thanks.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/js/combined/site/thanks.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="contact.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/js/combined/site/contact.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1665">
+              <caret line="111" selection-start-line="111" selection-end-line="111" />
             </state>
           </provider>
         </entry>
@@ -300,62 +93,8 @@
       <file leaf-file-name="_entry.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/craft/templates/bands/_entry.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-556">
+            <state relative-caret-position="1110">
               <caret line="74" column="62" selection-start-line="74" selection-start-column="62" selection-end-line="74" selection-end-column="62" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="social.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/scss/base/social.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/scss/style.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-58">
-              <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_entry.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/craft/templates/artists/_entry.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="108" column="33" selection-start-line="108" selection-start-column="33" selection-end-line="108" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/craft/templates/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="34" selection-start-line="34" selection-end-line="36" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/craft/templates/backline/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="857">
-              <caret line="143" column="6" selection-start-line="143" selection-start-column="6" selection-end-line="143" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_entry.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/craft/templates/shows/_entry.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="929">
-              <caret line="64" selection-start-line="64" selection-end-line="64" />
             </state>
           </provider>
         </entry>
@@ -419,8 +158,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/craft/templates/contact/contact.html" />
-        <option value="$PROJECT_DIR$/DecorativeLetterAnimations/css/base.css" />
         <option value="$PROJECT_DIR$/DecorativeLetterAnimations/index.html" />
         <option value="$PROJECT_DIR$/source/scss/header.scss" />
         <option value="$PROJECT_DIR$/source/scss/color.scss" />
@@ -441,7 +178,6 @@
         <option value="$USER_HOME$/scotch/public/index.php" />
         <option value="$USER_HOME$/scotch/Vagrantfile" />
         <option value="$PROJECT_DIR$/craft/templates/news/index.html" />
-        <option value="$PROJECT_DIR$/source/scss/pages/contact.scss" />
         <option value="$PROJECT_DIR$/craft/templates/shows/index.html" />
         <option value="$PROJECT_DIR$/craft/templates/media/index.html" />
         <option value="$PROJECT_DIR$/craft/templates/search/index.html" />
@@ -461,7 +197,6 @@
         <option value="$PROJECT_DIR$/craft/config/general.php" />
         <option value="$PROJECT_DIR$/craft/templates/artists/index.html" />
         <option value="$PROJECT_DIR$/craft/templates/bands/index.html" />
-        <option value="$PROJECT_DIR$/craft/templates/contact/index.html" />
         <option value="$PROJECT_DIR$/craft/templates/shows/_entry.html" />
         <option value="$PROJECT_DIR$/craft/templates/artists/_entry.html" />
         <option value="$PROJECT_DIR$/craft/templates/bands/_entry.html" />
@@ -470,6 +205,10 @@
         <option value="$PROJECT_DIR$/craft/templates/index.html" />
         <option value="$PROJECT_DIR$/craft/templates/backline/index.html" />
         <option value="$PROJECT_DIR$/craft/templates/_layout.html" />
+        <option value="$PROJECT_DIR$/craft/templates/contact/index.html" />
+        <option value="$PROJECT_DIR$/source/scss/pages/contact.scss" />
+        <option value="$PROJECT_DIR$/source/js/combined/site/contact.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -492,11 +231,60 @@
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 5.5" />
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 5.5">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/league/flysystem" />
+      <path value="$PROJECT_DIR$/vendor/league/oauth2-client" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/craftcms/plugin-installer" />
+      <path value="$PROJECT_DIR$/vendor/craftcms/oauth2-craftid" />
+      <path value="$PROJECT_DIR$/vendor/craftcms/cms" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/vendor/craftcms/server-check" />
+      <path value="$PROJECT_DIR$/vendor/enshrined/svg-sanitize" />
+      <path value="$PROJECT_DIR$/vendor/creocoder/yii2-nested-sets" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/vendor/mikehaertl/php-shellcommand" />
+      <path value="$PROJECT_DIR$/vendor/pixelandtonic/imagine" />
+      <path value="$PROJECT_DIR$/vendor/danielstjules/stringy" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-feed" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-escaper" />
+      <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-stdlib" />
+      <path value="$PROJECT_DIR$/vendor/seld/phar-utils" />
+      <path value="$PROJECT_DIR$/vendor/seld/cli-prompt" />
+      <path value="$PROJECT_DIR$/vendor/ezyang/htmlpurifier" />
+      <path value="$PROJECT_DIR$/vendor/elvanto/litemoji" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/justinrainbow/json-schema" />
+      <path value="$PROJECT_DIR$/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/vendor/cebe/markdown" />
+      <path value="$PROJECT_DIR$/vendor/seld/jsonlint" />
+      <path value="$PROJECT_DIR$/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/vendor/yiisoft/yii2" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/debug" />
+      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/vendor/yiisoft/yii2-bootstrap" />
+      <path value="$PROJECT_DIR$/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/vendor/yiisoft/yii2-debug" />
+      <path value="$PROJECT_DIR$/vendor/yiisoft/yii2-queue" />
+      <path value="$PROJECT_DIR$/vendor/yiisoft/yii2-swiftmailer" />
+      <path value="$PROJECT_DIR$/vendor/yiisoft/yii2-composer" />
+      <path value="$PROJECT_DIR$/vendor/craftcms/contact-form" />
+    </include_path>
+  </component>
   <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="x" value="960" />
     <option name="y" value="22" />
-    <option name="width" value="840" />
-    <option name="height" value="1028" />
+    <option name="width" value="960" />
+    <option name="height" value="1058" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -520,7 +308,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -528,99 +315,11 @@
               <item name="biglion" type="b2602c69:ProjectViewProjectNode" />
               <item name="biglion" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
-            <path>
-              <item name="biglion" type="b2602c69:ProjectViewProjectNode" />
-              <item name="biglion" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="craft" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="biglion" type="b2602c69:ProjectViewProjectNode" />
-              <item name="biglion" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="craft" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="biglion" type="b2602c69:ProjectViewProjectNode" />
-              <item name="biglion" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="craft" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="artists" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="biglion" type="b2602c69:ProjectViewProjectNode" />
-              <item name="biglion" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="craft" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="backline" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="biglion" type="b2602c69:ProjectViewProjectNode" />
-              <item name="biglion" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="craft" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="bands" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="biglion" type="b2602c69:ProjectViewProjectNode" />
-              <item name="biglion" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="craft" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="shows" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="biglion" type="b2602c69:ProjectViewProjectNode" />
-              <item name="biglion" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="biglion" type="b2602c69:ProjectViewProjectNode" />
-              <item name="biglion" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="biglion" type="b2602c69:ProjectViewProjectNode" />
-              <item name="biglion" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="source" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="biglion" type="b2602c69:ProjectViewProjectNode" />
-              <item name="biglion" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="source" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="biglion" type="b2602c69:ProjectViewProjectNode" />
-              <item name="biglion" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="source" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="combined" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="biglion" type="b2602c69:ProjectViewProjectNode" />
-              <item name="biglion" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="source" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="combined" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="site" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="biglion" type="b2602c69:ProjectViewProjectNode" />
-              <item name="biglion" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="source" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="scss" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="biglion" type="b2602c69:ProjectViewProjectNode" />
-              <item name="biglion" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="source" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="scss" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="base" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -634,11 +333,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/source/js/combined/site" />
+      <recent name="$PROJECT_DIR$/craft/plugins" />
       <recent name="$PROJECT_DIR$/source/js/individual" />
       <recent name="$PROJECT_DIR$/source/js/combined/libs" />
       <recent name="$PROJECT_DIR$/source/js/combined" />
-      <recent name="$PROJECT_DIR$/craft/plugins" />
-      <recent name="$PROJECT_DIR$/public/biglion/public/images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/source/js/combined/site" />
@@ -707,28 +406,31 @@
       <workItem from="1523371510206" duration="773000" />
       <workItem from="1523606630940" duration="1513000" />
       <workItem from="1523612029081" duration="1764000" />
+      <workItem from="1523620240011" duration="981000" />
+      <workItem from="1523621679991" duration="617000" />
+      <workItem from="1523624512801" duration="38000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98824000" />
+    <option name="totallyTimeSpent" value="100969000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14536741" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13045794" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -752,10 +454,10 @@
     <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/craft/templates/_layout.html">
+    <entry file="file://$PROJECT_DIR$/source/js/combined/site/contact.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3015">
-          <caret line="201" column="28" selection-start-line="159" selection-start-column="16" selection-end-line="201" selection-end-column="28" />
+        <state relative-caret-position="1665">
+          <caret line="111" selection-start-line="111" selection-end-line="111" />
         </state>
       </provider>
     </entry>
@@ -766,10 +468,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/scss/base/social.scss">
+    <entry file="file://$PROJECT_DIR$/craft/templates/contact/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+        <state relative-caret-position="885">
+          <caret line="59" selection-start-line="59" selection-end-line="59" />
         </state>
       </provider>
     </entry>
@@ -820,20 +522,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="33" column="16" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="15" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/scss/pages/contact.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -942,13 +630,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/craft/templates/cheatsheet.html" />
-    <entry file="file://$PROJECT_DIR$/craft/config/general.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/craft/config/db.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -970,13 +651,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/craft/templates/contact/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="24" column="29" lean-forward="true" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/craft/templates/news/_entry.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -993,29 +667,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/craft/templates/artists/_entry.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
+        <state relative-caret-position="1620">
           <caret line="108" column="33" selection-start-line="108" selection-start-column="33" selection-end-line="108" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/source/scss/style.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-58">
-          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/scss/base/social.scss">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/craft/templates/bands/_entry.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-556">
-          <caret line="74" column="62" selection-start-line="74" selection-start-column="62" selection-end-line="74" selection-end-column="62" />
+          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -1028,15 +688,76 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/craft/templates/backline/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="857">
+        <state relative-caret-position="2145">
           <caret line="143" column="6" selection-start-line="143" selection-start-column="6" selection-end-line="143" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/craft/config/general.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/craft/templates/_layout.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="165" column="22" lean-forward="true" selection-start-line="165" selection-start-column="22" selection-end-line="165" selection-end-column="22" />
+        <state relative-caret-position="1620">
+          <caret line="108" column="21" selection-start-line="108" selection-start-column="21" selection-end-line="108" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/scss/base/social.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/craft/templates/bands/_entry.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1110">
+          <caret line="74" column="62" selection-start-line="74" selection-start-column="62" selection-end-line="74" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/js/combined/site/contact.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1665">
+          <caret line="111" selection-start-line="111" selection-end-line="111" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/js/scripts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1396" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/craft/templates/contact/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="41" column="44" lean-forward="true" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/scss/pages/contact.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="44" column="45" selection-start-line="44" selection-start-column="45" selection-end-line="44" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/js/combined/site/thanks.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
         </state>
       </provider>
     </entry>
