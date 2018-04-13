@@ -16,7 +16,7 @@
     margin: 0;
     padding: 20px;
     background: $gold;
-    color: $textcolor;
+    color: $black;
   }
   .backline-packages {
     h3 {
@@ -31,12 +31,14 @@
       display: inline-block;
       margin: 0;
       padding: 20px;
-      background: #FFDD00;
-      color: #000000;
+      background: $gold;
+      color: $black;
       float: right;
     }
     #carouselExampleCaptions {
-      background: darkgrey;
+      background: transparent;
+      border: solid 5px $grey;
+      border-radius: 2%;
       img {
         width: 100%;
         height: 400px;
@@ -48,9 +50,27 @@
           background-color: $gold;
           padding: 20px;
           opacity: 0.8;
-          color: $textcolor;
+          color: $black;
           display: inline-block;
         }
+      }
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+        height: 100px;
+        width: 100px;
+        background-image: none;
+      }
+      .carousel-control-next-icon:after
+      {
+        content: '>';
+        font-size: 55px;
+        color: $gold;
+      }
+
+      .carousel-control-prev-icon:after {
+        content: '<';
+        font-size: 55px;
+        color: $gold;
       }
     }
   }
@@ -59,8 +79,8 @@
       display: inline-block;
       margin: 0;
       padding: 20px;
-      background: #FFDD00;
-      color: #000000;
+      background: $gold;
+      color: $black;
       float: left;
     }
   }

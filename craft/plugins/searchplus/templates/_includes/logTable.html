@@ -1,0 +1,52 @@
+{% import 'searchplus/_includes/macros' as macros %}
+{% set tableid = tableId|default('logs') %}
+
+<div id="no{{ tableid }}"{% if threads %} class="hidden"{% endif %}>
+    <p>{{ "No log items exist"|t }}</p>
+</div>
+
+
+{% if threads|length %}
+    <table id="{{ tableid }}" class="searchplus-log data collapsible">
+        <thead>
+        <th scope="col" class="thin">{{ "Id"|t }}</th>
+        <th scope="col">{{ "Level"|t }}</th>
+        <th scope="col">{{ "Type"|t }}</th>
+        <th scope="col">{{ "Details"|t }}</th>
+        <th scope="col">{{ "Timestamp"|t }}</th>
+        <td class="thin"></td>
+        </thead>
+        <tbody>
+        {% for thread in threads %}
+
+
+            {% for key,log in thread|reverse %}
+                <tr data-id="{{ log.id }}" data-name="{{ log.type|t }}"
+                    class="{{ ( fadeOut|default(false) ? 'typefade' : '' ) }} type-{{ log.level }} {{ ( relatedTo|default('0') == log.id ? 'logfadeout' ) }} {% if loop.first %}loopfirst{% endif %}{% if loop.last %}looplast{% endif %}">
+
+                    <td><a href="{{ url('searchplus/logs/' ~ log.id ) }}">{{ log.id }}</a></td>
+                    <td class="col-label" data-title="{{ 'Level'|t }}">{% if not loop.first %}&rdsh; {% endif %}<span class="label label-{{ log.level }}"> {{ log.level }}</span></td>
+
+                    <td scope="row" data-title="{{ 'Type'|t }}">{{ log.type|t }}</td>
+
+                    <td data-title="{{ 'Details'|t }}">
+                        {%- if showDetails|default(false) -%}
+                            {{ macros.extraLoop(log.extra) }}
+                        {%- else -%}
+                            <a href="{{ url('searchplus/logs/' ~ log.id ) }}">view</a>
+                        {%- endif -%}
+                    </td>
+
+                    <td data-title="{{ 'Timestamp'|t }}"><code>{{ log.dateCreated|date('Y/m/d H:i') }}</code></td>
+
+                    <td class="thin"><a class="delete icon" title="{{ 'Delete'|t }}" role="button"></a></td>
+                </tr>
+            {% endfor %}
+
+        {% endfor %}
+        </tbody>
+    </table>
+
+    {% if paginate|default(false) %}{% include "searchplus/_includes/pagination" %}{% endif %}
+
+{% endif %}

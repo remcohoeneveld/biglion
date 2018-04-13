@@ -1,9 +1,20 @@
 @import "../base/color";
 
 #contact_form {
-  .form-group {
-    .first, .last {
-      display: inline-block;
+  .first, .last{
+    display: inline-block;
+    float: left;
+  }
+  .form-group{
+    margin: 0;
+    .input-group{
+      input, textarea{
+        width: 100%;
+        min-width: 220px;
+        max-width: 220px;
+        margin: 10px 0;
+      }
+
     }
   }
   #success_message {

@@ -1,0 +1,63 @@
+{% extends "searchplus/_layouts/settings" %}
+
+
+{% block content %}
+    <h1>Setup</h1>
+    <p>We need some details to connect to your Algolia account. You'll be able to find these details in the <a
+                href="https://www.algolia.com/licensing" target="_blank">Algolia Dashboard > Credentials</a></p>
+
+    <form method="post" accept-charset="UTF-8" data-saveshortcut="">
+        <input type="hidden" name="action" value="searchPlus/algolia/saveSettings">
+        <input type="hidden" name="redirect" value="searchplus/algolia">
+        {{ getCsrfInput() }}
+
+
+        {% if not settingsEditable %}
+        <p class="warning"><strong>Note:</strong> These Algolia settings are being defined in your site's config files. To alter, update them directly in the config file.</p>
+        {% endif %}
+
+        {{ forms.textField({
+            label: "Algolia Application ID",
+            instructions: "Your unique application ID.",
+            name: 'algoliaSettings[applicationId]',
+            id: 'applicationId',
+            value: (algolia.applicationId is defined ? algolia.applicationId : ''),
+            placeholder: 'eg. 1234ABCDEF',
+            readonly: not settingsEditable,
+            disabled: not settingsEditable,
+            warning: (not settingsEditable ? 'Set in your config as \'applicationId\'' )
+        }) }}
+
+        {{ forms.textField({
+            label: "Search-Only API Key",
+            instructions: "This is the public API key to use in your frontend code. This key is only usable for search queries.",
+            name: 'algoliaSettings[searchApiKey]',
+            id: 'searchApiKey',
+            value: (algolia.searchApiKey is defined ? algolia.searchApiKey : ''),
+            placeholder: '',
+            readonly: not settingsEditable,
+            disabled: not settingsEditable,
+            warning: (not settingsEditable ? 'Set in your config as \'searchApiKey\'')
+        }) }}
+
+
+        {{ forms.passwordField({
+            label: "Admin API Key",
+            instructions: "This is the ADMIN API key. This key is used to create, update and DELETE your indices.",
+            name: 'algoliaSettings[adminApiKey]',
+            id: 'adminApiKey',
+            value: (algolia.adminApiKey is defined ? algolia.adminApiKey : ''),
+            placeholder: '',
+            readonly: not settingsEditable,
+            disabled: not settingsEditable,
+            warning: (not settingsEditable ? 'Set in your config as \'adminApiKey\'')
+        }) }}
+
+        <div class="buttons">
+            <input class="btn submit" type="submit" value="Save & Validate">
+        </div>
+    </form>
+
+
+{% endblock %}
+

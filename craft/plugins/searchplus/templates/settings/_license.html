@@ -1,0 +1,74 @@
+{% extends "searchplus/_layouts/settings" %}
+
+
+{% block content %}
+
+
+
+    {% if edition < 1 %}
+    <div id="free-license-header" class="reg-header">
+        <img src="{{ resourceUrl('searchplus/icon.svg') }}" width="100" height="100">
+        <h2>{{ "Search Plus Free"|t }}</h2>
+        <p class="light">You are currently running the <strong>Free</strong> edition. <br/>The Free edition limits the total number of indexes to <strong>3</strong>, and the maximum number of items per-index to <strong>100</strong>.</p>
+        <p class="light">You can upgrade to <strong>Pro</strong> to enable <strong>unlimited indexes</strong> and <strong>unlimited items</strong> per-index.</p>
+    </div>
+    {% else %}
+    <div id="pro-license-header" class="reg-header">
+        <img src="{{ resourceUrl('searchplus/img/searchplus-beta-icon.svg') }}" width="100" height="100">
+        <h2>{{ "Search Plus"|t }} {{ editionName }}</h2>
+        <p class="light">You are currently running the <strong>{{ editionName }}</strong> edition. <br/>This has <strong>unlimited indexes</strong>, with <strong>unlimited items</strong> per-index.</p>
+    </div>
+    {% endif %}
+
+    <hr/>
+
+
+    {% if editionName == 'Beta' %}
+        <div class="">
+            <h2>Search Plus is in Beta</h2>
+            <p class="light">{{ "Thanks for helping test Search Plus"|t }}</p>
+
+            {#<p><a id="searchplusupgradepromo" href="#" class="btn">Change your Search Plus Edition</a></p>#}
+        </div>
+
+    {% else %}
+
+
+        {% if licenseStatus == 'valid' %}
+            <div class="">
+                <h2>Search Plus is licensed</h2>
+                <p class="light">{{ "Thanks for your support!"|t }}</p>
+
+                <p><a id="searchplusupgradepromo" href="#" class="btn">Change your Search Plus Edition</a></p>
+            </div>
+
+        {% elseif licenseStatus == 'invalid' %}
+
+            <div class="">
+                <p class="warning">Your Search Plus license is invalid.</p>
+                <p><a id="searchplusupgradepromo" href="#" class="btn submit">Purchase a license for Pro</a>  <a href="#" class="btn">Revert to Free</a></p>
+            </div>
+
+        {% elseif licenseStatus == 'mismatched' %}
+
+            <div class="">
+                <p class="warning">Your Search Plus license is being used on another Craft install.</p>
+                <p><a id="searchplusupgradepromo" href="#" class="btn submit">Purchase a new license for Pro</a></p>
+                <p>or..</p>
+                <p><a href="#" class="btn ">Move the existing license to this domain</a> <a href="#" class="btn">Revert to Free</a></p>
+            </div>
+
+        {% else %}
+
+            {% if edition < 1 %}
+                <p><a id="searchplusupgradepromo" href="#" class="btn submit">Upgrade to Search Plus Pro</a></p>
+            {% else %}
+                <p><a id="searchplusupgradepromo" href="#" class="btn submit">Update your Search Plus License</a></p>
+            {% endif %}
+        {% endif %}
+
+
+    {% endif %}
+
+{% endblock %}
+

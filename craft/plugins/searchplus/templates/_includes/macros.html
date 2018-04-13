@@ -1,0 +1,17 @@
+{% macro extraLoop(data, datakey) %}
+    {% if data %}
+        <ul>
+            {% if data is iterable %}
+                {%- for key,row in data %}
+                    {% if row is iterable %}
+                        <pre><code>{{ dump(row) }}</code></pre>
+                    {% else %}
+                        <li><code>{{ row }}</code></li>
+                    {% endif %}
+                {%- endfor %}
+            {% else %}
+                <li><code>{{ data }}</code></li>
+            {% endif %}
+        </ul>
+    {% endif %}
+{% endmacro %}

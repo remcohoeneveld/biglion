@@ -1,0 +1,134 @@
+
+.searchplus-container .ajaxstatus-container {
+    /*height: 55px;
+    padding: 1em 0;*/
+}
+.searchplus-container .progressbar {
+    display: block;
+    margin: 1em 0 0 0;
+    position: relative;
+    left: 0;
+}
+
+.searchplus-container .alldone {
+}
+
+.searchplus-container .icon {
+    font-size : 3em;
+
+    line-height: 1.1em;
+}
+.searchplus-container .errored {
+    color: #da5a47;
+}
+
+
+.searchplus-log .col-label {
+    min-width: 5em;
+}
+.searchplus-log .typefade.type-note {
+    /*opacity: 0.7;*/
+}
+
+.searchplus-log .logfadeout {
+    opacity: 0.5;
+}
+
+.searchplus-log tr.looplast td {
+    border-bottom: 1px solid #e3e5e8;
+}
+
+.searchplus-log .label {
+    padding: 0.1em 0.4em 0.2em;
+    font-variant: small-caps;
+    background-color: #98A3AE; /* grey */
+    color: #fff;
+    border-radius: 2px;
+}
+
+.searchplus-log .label.label-error {
+    background-color: #D0021B; /* red */
+}
+
+.searchplus-log .label.label-softerror {
+    background-color: #F1C40E; /* yellow */
+}
+
+.searchplus-log .label.label-exception {
+    background-color: #D0021B; /* red */
+}
+
+.searchplus-log .label.label-success {
+    background-color: #27AE60; /* green */
+}
+
+.searchplus-log .label.label-info, .searchplus-log .label.label-request {
+    background-color: #fff;
+    color: #6B6464;
+    border: 1px solid #D1D3D5; /* white */
+}
+
+.searchplus-log .label.label-task {
+    background-color: #0D99F2; /* blue */
+}
+
+.searchplus-log .label.label-callback {
+    background-color: #F2842D; /* orange */
+}
+
+.searchplus-log .label.label-action, .searchplus-log .label.label-api  {
+    background-color: #9B59B6; /* purple */
+}
+
+.searchplus-log .label.label-email {
+    background-color: #2CE0BD; /* turquoise */
+}
+
+/*
+orange #F2842D;
+red  #D0021B;
+yellow #F1C40E;
+pink #FF50F2;
+purple #9B59B6;
+blue #0D99F2;
+turquoise #2CE0BD;
+light #CCD1D6;
+grey #98A3AE;
+black  #32475E;
+*/
+
+
+.status.test {
+    background-color: #F1C40E;
+    border-color: transparent !important;
+}
+
+div.pagination {
+    margin: 1em 0 1em 0;
+}
+
+div.pagination ul li {
+    float: left;
+}
+
+div.pagination ul li a, div.pagination ul li span {
+    padding: 5px 10px;
+    display: block;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+
+div.pagination ul li a:hover {
+    background: #f9f9f9;
+    text-decoration: none;
+}
+
+div.pagination ul li span {
+    background: #f2f2f2;
+}
+
+
+
+
+

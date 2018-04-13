@@ -1,0 +1,39 @@
+{% extends "searchplus/_layouts/settings" %}
+
+{% block content %}
+    <h1>Mappings</h1>
+
+    <p>Content is mapped from Craft to Algolia through <em>Mappings</em>.</p>
+    <p>We include a basic mapping as part of the default setup. You can also add your own custom mappings using the <code>searchPlus_addAlgoliaMapping</code> hook.</p>
+
+
+    <h2>Available Mappings</h2>
+
+    <table class="data fullwidth">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Handle</th>
+            <th>Description</th>
+            <th>Source</th>
+            <th>View</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for map in mappingOptions %}
+            <tr>
+                <td>
+                    {{ map.name }}
+                </td>
+                <td><code>{{ map.handle }}</code></td>
+                <td>{{ map.description }}</td>
+                <td>{{ map.plugin }}</td>
+                <td><a href="{{ url('searchplus/settings/mappings/test?handle='~ map.handle) }}" class="btn small">View Example</a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+{% endblock %}
+

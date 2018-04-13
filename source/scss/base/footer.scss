@@ -1,7 +1,7 @@
 @import "color";
 
 .footer {
-  background-color: darkgrey;
+  background-color: $grey;
   .foot {
     margin-bottom: 40px;
     .contact {
@@ -31,12 +31,12 @@
         li {
           display: inline-block;
           a {
-            background: $textcolor;
+            background: $black;
             padding: 20px;
             color: $gold;
             &:hover {
               background: $gold;
-              color: $textcolor;
+              color: $black;
               text-decoration: none;
             }
           }
@@ -45,7 +45,7 @@
     }
   }
   .footer-copyright {
-    background-color: $textcolor;
+    background-color: $black;
     .main-footer {
       color: white;
       text-align: center;

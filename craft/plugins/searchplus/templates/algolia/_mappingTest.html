@@ -1,0 +1,55 @@
+{% extends "searchplus/_layouts/settings" %}
+
+
+{% block content %}
+    <h1>Mapping Test</h1>
+
+    <hr>
+     
+    <div id="n" class="buttons">
+        <form method="post" action="">
+            {{ getCsrfInput() }}
+            <input type="hidden" name="action" value="searchPlus/algolia/testMapping"/>
+            <input type="hidden" name="handle" value="{{ map.handle  }}"/>
+            <input type="hidden" name="type" value="{{ elementClass }}"/>
+            <p>Testing the output for the <strong>{{ map.name }}</strong> mapping.</p>
+            {{ forms.elementSelectField({   
+                label: "Test Element"|t,
+                id: 'elementId',
+                name: 'elementId',
+                elements: [testItem],
+                elementType: elementType,
+                selectionLabel: "Choose"|t,
+                limit: 1,
+            }) }}
+
+            <input type="submit" class="btn submit"
+                   value="{{ 'Re-test'|t }}"/>
+        </form>
+    </div>
+
+
+
+    <hr/>
+    <h2>Map Info</h2>
+    <ul>
+        <li>Name: <strong>{{ map.name }}</strong></li>
+        <li>Handle: <strong>{{ map.handle }}</strong></li>
+        <li>Description: <strong>{{ map.description }}</strong></li>
+        <li>Plugin: <strong>{{ map.plugin }}</strong></li>
+    </ul>
+
+    <hr/>
+    <h2>Example Output</h2>
+    <pre><code>{{ dump(example) }}</code></pre>
+
+    {{ forms.textareaField({
+        label: 'RAW Json Output',
+        id: 'jsonoutput',
+        name: 'json',
+        readonly: true,
+        value: exampleJson,
+        rows:10
+    }) }}
+{% endblock %}
+

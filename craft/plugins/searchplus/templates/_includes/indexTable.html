@@ -1,0 +1,54 @@
+<table class="data fullwidth">
+    <thead>
+    <tr>
+        <th>Index</th>
+        <th>Handle</th>
+        <th>Item Count<br/>Craft / Algolia</th>
+        <th>Mapped Content</th>
+        <th>View</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for index in indexes %}
+        <tr>
+            <td>
+                <a href="{{ url('searchplus/algolia/editIndex/'~index.id) }}" title="Update Mapping">
+                    {% if index.populationStatus == 'uptodate' %}
+                    <span class="status live"></span><span class="title">{{  index.name }}</span>
+                {% elseif index.populationStatus == 'outofsync' %}
+                    <span class="status pending"></span><span class="title">{{  index.name }}</span> <span class="light">({%- if index.elements > index.entries -%}{{ index.elements - index.entries}} items missing){%- else -%}{{ index.entries - index.elements}} additional items){% endif %}</span>
+                {% elseif index.populationStatus == 'empty' %}
+                    <span class="status expired"></span><span class="title">{{  index.name }}</span> <span class="light">(empty)</span>
+                {% else %}
+                    <span class="status"></span><span class="title">{{  index.name }}</span> <span class="light">(unknown)</span>
+                {% endif %}
+                </a>
+
+            </td>
+            <td>
+                <code>{{ index.handle }}</code>
+            </td>
+            <td>
+                {{ index.elements }} / {% if index.entries == '' %}0{% else %}{{ index.entries }}{% endif %}
+            </td>
+            {#<td>
+                {% for key, map in index.indexMap %}
+                    {% if key == '*' %}<code>{{ map }}</code>{% endif %}
+                    {# handle multi env display.. #}
+            {#{% endfor %}
+            </td>#}
+            <td>
+                {{ index.getSectionMapDescription() }}
+            </td>
+            <td><a href="https://www.algolia.com/explorer#?index={{ index.handle }}" target="_blank"><span class="go nowrap">View on Algolia</span></a></td>
+            <td>
+
+                <a href="{{ url('searchplus/algolia/manageIndex/'~index.id) }}" class="btn icon"
+                   data-icon="settings">Manage</a>
+
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>

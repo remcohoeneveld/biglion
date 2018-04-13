@@ -1,0 +1,67 @@
+{% extends "searchplus/_layouts/settings" %}
+{% set selectedTab = 'settings' %}
+{% set title = "Settings"|t %}
+
+{% block content %}
+    <h1>Logging</h1>
+
+    <form method="post" accept-charset="UTF-8" data-saveshortcut>
+        {{ getCsrfInput() }}
+        {{ forms.hidden({ name: 'action', value: 'searchPlus/settings/saveLogs' }) }}
+        {{ forms.hidden({ name: 'pluginClass', value: 'SearchPlus' }) }}
+        {{ forms.hidden({ name: 'redirect', value: 'searchplus/settings/logs' }) }}
+
+
+        {{ forms.lightswitchField({
+            first: true,
+            label: "Enable SearchPlus Activity Logs?"|t,
+            id: 'level',
+            name: 'logs[enabled]',
+            instructions: "SearchPlus can log various activity that is triggered as part the system. Logging can be very useful for debugging behaviour during development, or tracking down errors"|t,
+            on: (logs.enabled is defined ? logs.enabled ),
+            autofocus: true,
+            toggle: 'logoptions',
+            readonly: not settingsEditable,
+            warning: (not settingsEditable ? 'Set in your config as \'logs > enabled\'' )
+        }) }}
+
+
+        <div class="dependant {%- if (logs.enabled is not defined) or (not logs.enabled) %} hidden{% endif %}" id="logoptions">
+
+         {{ forms.selectField({
+                 first: true,
+                 label: "Logging Level"|t,
+                 id: 'level',
+                 name: 'logs[level]',
+                 instructions: "What level of logging should be kept? "|t,
+                 value: (logs.level is defined ? logs.level ),
+                 autofocus: true,
+                 options: logLevels,
+                 readonly: not settingsEditable,
+                 warning: (not settingsEditable ? 'Set in your config as \'logs > level\'' )
+             }) }}
+     
+
+
+            {{ forms.selectField({
+                first: true,
+                label: "Log Retention"|t,
+                id: 'retention',
+                name: 'logs[retention]',
+                instructions: "How long should we keep the logs for?"|t,
+                value: (logs.retention is defined ? logs.retention ),
+                autofocus: true,
+                options: logRetention,
+                readonly: not settingsEditable,
+                warning: (not settingsEditable ? 'Set in your config as \'logs > retention\'' )
+            }) }}
+        </div>
+
+
+        <div class="buttons">
+            <input type="submit" class="btn submit" value="Update Log Settings"/>
+        </div>
+
+    </form>
+
+{% endblock %}

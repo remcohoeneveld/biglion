@@ -1,0 +1,24 @@
+{% import '_includes/forms' as forms %}
+
+<h1>Settings</h1>
+
+{{ forms.lightswitchField({
+	label: "Log Searches",
+	instructions: "Keep a log of all searches performed. This can have a small performance penalty",
+	name: 'enabledLog',
+	id: 'enabledLog',
+	on:   settings.enabledLog,
+	onLabel: "Logging"|t,
+	offLabel: "No Logging"|t
+}) }}
+
+
+{{ forms.lightswitchField({
+	label: "Enable Algolia Search",
+	instructions: "Algolia is an alternative search backend.",
+	name: 'enabledAlgolia',
+	id: 'enabledAlgolia',
+	on:   settings.enabledAlgolia,
+	onLabel: "Enabled"|t,
+	offLabel: "Disabled"|t
+}) }}

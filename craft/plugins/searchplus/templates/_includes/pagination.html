@@ -1,0 +1,14 @@
+{% if prevPage or nextPage %}
+<div class="pagination">
+    <p>Showing page {{ currentPage }} of {{ totalPages }}</p>
+    <ul>
+        {% if prevPage %}
+        <li><a href="?p={{ prevPage }}" class="pagination">&laquo; {{ "Prev"|t }}</a></li>
+        {% endif %}
+        {% if nextPage %}
+        <li><a href="?p={{ nextPage }}" class="pagination">{{ "Next"|t }} &raquo;</a></li>
+        {% endif %}
+    </ul>
+    <div class="clear"></div>
+</div>
+{% endif %}

@@ -1,0 +1,75 @@
+{% set elementErrors = {} %}
+    {% set hasErrors = false %}
+    {% if (index is defined) %}{% set elementErrors = index.getErrors('sectionMap') %}{% endif %}
+
+    {% if elementErrors|length > 0 %}
+        {% set hasErrors = true %}
+    {% endif %}
+
+<div class="field{% if hasErrors %} has-errors{% endif %}" id="elementmapping-field">
+    <div class="heading">
+        <label class="required" for="elementmapping">
+            Elements
+        </label>
+        <div class="instructions">What content should be searchable in <strong>this index?</strong></div>
+    </div>
+    <div class="input ltr">
+        {% set checked = false %}
+        {% for elementOption in elementOptions %}
+
+            {% if index is defined and elementOption.name in index.sectionMap.elements %}
+                {% set checked = true %}
+            {% endif %}
+            
+            {% if (elementOption.default is defined) %}
+                {% set checked = true %}
+            {% endif %}
+
+            {{ forms.checkbox({
+                label: elementOption.label|t,
+                value: elementOption.name,
+                name: 'sectionMap[elements][]',
+                required: true,
+                checked: checked,
+                toggle: 'options-'~ elementOption.name,
+                disabled: (elementOption.disabled is defined ? elementOption.disabled),
+            }) }}
+
+            {# Elements can have options depending on their specific handling #}
+            {% if elementOption.options is defined %}
+                {% set hidden = 'hidden' %}
+                {% if (checked) %}{% set hidden = ' '%}{% endif %}
+                {% set values = {} %}
+
+                <div id="options-{{ elementOption.name }}" class="fieldset nested-fields {{ hidden }}" style="padding-bottom:1em; margin-left: -12px; margin-top: -18px;">
+                    {% for option in elementOption.options %}
+
+                        {% if index is defined %}
+                            {% if index.sectionMap.options[elementOption.name] is defined %}
+                                {% set opts = attribute(index.sectionMap.options, elementOption.name) %}
+                                {% set values = attribute(opts, option.handle) %}
+                            {% endif %}
+                        {% endif %}
+
+
+                        {{ forms.checkboxSelectField({
+                            label: option.name|t,
+                            instructions: option.instructions,
+                            name: 'sectionMap[options]['~elementOption.name~']['~option.handle~']',
+                            options: option.options,
+                            values: values,
+                            required: true,
+                            showAllOption: false
+                        }) }}
+                    {% endfor %}
+                </div>
+            {% endif %}
+            <div>&nbsp;</div>
+        {% endfor %}
+    </div>
+    {% if hasErrors %}
+        <div class="errors">
+            {{ forms.errorList(elementErrors) }}
+        </div>
+    {% endif %}
+</div>

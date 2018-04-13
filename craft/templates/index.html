@@ -1,16 +1,18 @@
 {% extends "_layout" %}
+{% set title = "Homepage" %}
 
 {% block content %}
+
+
+<div class="header-img">
+    {# Fetches the first image #}
+    {% set image = entry.featureImage.first() %}
+    {% if image %}
+    <img class="home-image" src="{{siteUrl}}{{ image.url }}" alt="">
+    {% endif %}
+</div>
+
 <div class="container home">
-    <div class="row">
-        <div class="col-md-12">
-            {# Fetches the first image #}
-            {% set image = entry.featureImage.first() %}
-            {% if image %}
-            <img class="home-image" src="{{ image.url }}" alt="">
-            {% endif %}
-        </div>
-    </div>
 
     <div class="row">
         <div class="col-md-9">
@@ -30,6 +32,9 @@
         </div>
     </div>
 
+
+    {% for show in craft.entries.section('shows').limit(1).find() %}
+    {% if show|length %}
     <div class="row">
         <!-- Related Projects Row -->
         <h3 class="col-md-12 ">Recent shows</h3>
@@ -40,11 +45,13 @@
                 {# Fetches the first image #}
                 {% set image = entry.showsImage.first() %}
                 {% if image %}
-                <img class="featureImage" src="{{ image.url }}" alt="">
+                <img class="featureImage" src="{{siteUrl}}{{ image.url }}" alt="">
                 {% endif %}
             </a>
         </div>
         {% endfor %}
     </div>
+    {% endif %}
+    {% endfor %}
 </div>
 {% endblock %}

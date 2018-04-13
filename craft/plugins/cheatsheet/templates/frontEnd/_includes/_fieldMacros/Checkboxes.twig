@@ -1,0 +1,48 @@
+{%- macro cs_Checkboxes(data) %}
+
+	{{ _self.codeBlock('Field name', '
+		{{ ' ~ data.sampleTag ~ ' }}'
+	)}}
+
+
+	{{ _self.codeBlock('Single checkbox conditional', '
+		{% if ' ~ data.sampleTag ~ '|length %} ... {% endif %}'
+	)}}
+
+
+	{{ _self.codeBlock('Loop through the *selected* options', '
+		<ul>\n'
+		~ data.whitespace ~ '{% for option in '
+		~ data.sampleTag
+		~ ' %}\n'
+		~ data.whitespace ~ data.whitespace
+		~ '<li>{{ option }}</li>\n'
+		~ data.whitespace
+		~ '{% endfor %}\n'
+		~ '</ul>'
+	)}}
+
+
+	{{ _self.codeBlock('Loop through <em>all</em> of the options', '
+		<ul>\n'
+		~ data.whitespace ~ '{% for option in '
+		~ data.sampleTag
+		~ '.options %}\n'
+		~ data.whitespace ~ data.whitespace
+		~ '<li>{{ option }}</li>\n'
+		~ data.whitespace
+		~ '{% endfor %}\n'
+		~ '</ul>'
+	)}}
+
+
+	{{ _self.codeBlock('See if a specific option is selected', '
+		{% if '
+		~ data.sampleTag
+		~ '.contains(\'value\') %}\n'
+		~ data.whitespace
+		~ '...\n'
+		~ '{% endif %}'
+	)}}
+
+{% endmacro -%}

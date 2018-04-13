@@ -5,6 +5,7 @@
     position: relative;
     text-align: center;
     color: white;
+    margin: 10px;
     .centered {
       position: absolute;
       top: 50%;
@@ -13,15 +14,13 @@
       background: rgba(0, 0, 0, 0.5);
       width: 100%;
       height: 100%;
-
       -moz-transition: all 0.7s;
       -webkit-transition: all 0.7s;
       transition: all 0.7s;
       span {
         color: $gold;
-        padding: 15px;
-        line-height: 200px;
-
+        display: inline-block;
+        margin-top: 80px;
         -moz-transition: all 0.7s;
         -webkit-transition: all 0.7s;
         transition: all 0.7s;
@@ -30,7 +29,7 @@
         background-color: $gold;
         opacity: 0.9;
         span{
-          color: $textcolor;
+          color: $black;
         }
       }
     }
@@ -42,7 +41,7 @@
       &:hover {
         background-color: $gold;
         border-color: $gold;
-        color: $textcolor;
+        color: $black;
       }
     }
   }

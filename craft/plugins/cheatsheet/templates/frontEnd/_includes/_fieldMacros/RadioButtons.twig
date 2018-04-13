@@ -1,0 +1,25 @@
+{%- macro cs_RadioButtons(data) %}
+
+	{{ _self.codeBlock('The Selected value\'s option', '
+		{{ ' ~ data.sampleTag ~ ' }}'
+	)}}
+
+
+	{{ _self.codeBlock('The Selected value\'s label', '
+		{{ ' ~ data.sampleTag ~ '.label }}'
+	)}}
+
+
+	{{ _self.codeBlock('Loop through all available options', '
+		<ul>\n'
+		~ data.whitespace ~ '{% for option in '
+		~ data.sampleTag
+		~ '.options %}\n'
+		~ data.whitespace ~ data.whitespace
+		~ '<li>{{ option }}</li>\n'
+		~ data.whitespace
+		~ '{% endfor %}\n'
+		~ '</ul>'
+	)}}
+
+{% endmacro -%}

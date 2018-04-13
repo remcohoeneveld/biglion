@@ -1,0 +1,54 @@
+{%- macro cs_PositionSelect(data) %}
+
+	{{ _self.codeBlock('Adding to a class name', '
+		<div class="block {{ ' ~ data.sampleTag ~ ' }}">'
+	)}}
+
+
+	{{ _self.codeBlock('Conditionals around position values', '
+		{% if '
+		~ data.sampleTag
+		~ ' in [\'left\', \'right\'] %}\n'
+		~ data.whitespace
+		~ '{# ... #}\n'
+		~ '{% elseif '
+		~ data.sampleTag
+		~ ' == \'center\' %}\n'
+		~ data.whitespace
+		~ '{# ... #}\n'
+		~ '{% endif %}'
+	)}}
+
+
+	{{ _self.codeBlock('Switch statement for all values', '
+		{% switch '
+		~ data.sampleTag
+		~ ' %}\n'
+		~ data.whitespace
+		~ '{% case \'left\' %}\n'
+		~ data.whitespace ~ data.whitespace
+		~ '{# ... #}\n'
+		~ data.whitespace
+		~ '{% case \'center\' %}\n'
+		~ data.whitespace ~ data.whitespace
+		~ '{# ... #}\n'
+		~ data.whitespace
+		~ '{% case \'right\' %}\n'
+		~ data.whitespace ~ data.whitespace
+		~ '{# ... #}\n'
+		~ data.whitespace
+		~ '{% case \'full\' %}\n'
+		~ data.whitespace ~ data.whitespace
+		~ '{# ... #}\n'
+		~ data.whitespace
+		~ '{% case \'drop-left\' %}\n'
+		~ data.whitespace ~ data.whitespace
+		~ '{# ... #}\n'
+		~ data.whitespace
+		~ '{% case \'drop-right\' %}\n'
+		~ data.whitespace ~ data.whitespace
+		~ '{# ... #}\n'
+		~ '{% endswitch %}'
+	)}}
+
+{% endmacro  -%}

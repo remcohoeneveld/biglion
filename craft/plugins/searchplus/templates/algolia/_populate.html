@@ -1,0 +1,104 @@
+{% extends "searchplus/_layouts/cp" %}
+
+{% set crumbs = [
+{ label: "Indexes"|t, url: url('searchplus') },
+{ label: "Manage : "~index.name|t, url: url('searchplus/manageIndex/'~index.id) },
+{ label: "Debug Populate : "~index.name|t, url: url('searchplus/manageIndex/'~index.id~'/populate') },
+] %}
+
+
+
+{% block content %}
+    <div class="searchplus-container">
+        <h1>Debug Index Population : {{ index.name }}</h1>
+        <hr/>
+        <p>Index population has the following steps:</p>
+        <ol>
+            <li>Collect a list of the items from craft that need to be indexed</li>
+            <li>Loop over the list of items, and run them through the chosen content mapping</li>
+            <li>Transfer the items to the external provider</li>
+        </ol>
+        <p>Normally this is done via a Craft Task, but if you're having issues or seeing any unexpected behaviour, you can trigger each of these steps individually to help track any problems down.</p>
+        <hr/>
+        <h2>0. Clear the Slate</h2>
+        <p>Before we start, clear any pending, or partially complete populations.</p>
+
+        {% if queueStats.totalRows > 0 %}
+            <form method="post" accept-charset="UTF-8" data-saveshortcut="">
+                <input type="hidden" name="action" value="searchPlus/algolia/populate">
+                <input type="hidden" name="redirect" value="searchplus/algolia/manageIndex/{{ index.id }}/populate">
+                <input type="hidden" name="indexId" value="{{ index.id }}">
+                <input type="hidden" name="type" value="clear">
+                {{ getCsrfInput() }}
+                <input type="submit" value="Clear the Slate" class="btn"/>
+            </form>
+            <p><code>There are <strong>{{ queueStats.totalRows }}</strong> rows in the population table.</code></p>
+        {% else %}
+            <input type="submit" value="Clear the Slate" class="btn disabled"/>
+            <p><code>The population table is empty.</code></p>
+        {% endif %}
+
+        <hr/>
+        <h2>1. Collect Items</h2>
+
+        <form method="post" accept-charset="UTF-8" data-saveshortcut="">
+            <input type="hidden" name="action" value="searchPlus/algolia/populate">
+            <input type="hidden" name="redirect" value="searchplus/algolia/manageIndex/{{ index.id }}/populate">
+            <input type="hidden" name="indexId" value="{{ index.id }}">
+            <input type="hidden" name="type" value="collect">
+            {{ getCsrfInput() }}
+            <input type="submit" value="Collect the Items" class="btn"/>
+        </form>
+
+
+        <hr/>
+        <h2>2. Map Item Content</h2>
+        {% if queueStats.pendingItems > 0 %}
+            <form method="post" accept-charset="UTF-8" data-saveshortcut="">
+                <input type="hidden" name="action" value="searchPlus/algolia/populate">
+                <input type="hidden" name="redirect" value="searchplus/algolia/manageIndex/{{ index.id }}/populate">
+                <input type="hidden" name="indexId" value="{{ index.id }}">
+                <input type="hidden" name="type" value="map">
+                {{ getCsrfInput() }}
+                <input type="submit" value="Map Content" class="btn"/>
+            </form>
+            <p><code>There are <strong>{{ queueStats.pendingItems }}</strong> <em>pending</em> items in the queue.</code></p>
+
+            <p><code>The items will be mapped in <strong>{{ queueStats.batchCount }}</strong> batches.</code></p>
+
+        {% else %}
+            <input type="submit" value="Map Content" class="btn disabled"/>
+            <p><code>There are no pending items.</code></p>
+        {% endif %}
+
+        <hr/>
+        <h2>3. Transfer to Provider</h2>
+        <p>The provider for this index is <code>Algolia</code></p>
+
+        {% if queueStats.mappedItems > 0 %}
+            <form method="post" accept-charset="UTF-8" data-saveshortcut="">
+                <input type="hidden" name="action" value="searchPlus/algolia/populate">
+                <input type="hidden" name="redirect" value="searchplus/algolia/manageIndex/{{ index.id }}/populate">
+                <input type="hidden" name="indexId" value="{{ index.id }}">
+                <input type="hidden" name="type" value="transfer">
+                {{ getCsrfInput() }}
+                <input type="submit" value="Transfer to Provider" class="btn"/>
+            </form>
+            <p><code>There are <strong>{{ queueStats.mappedItems }}</strong> <em>mapped</em> items ready to transfer to the provider.</code></p>
+        {% else %}
+            <input type="submit" value="Transfer to Provider" class="btn disabled"/>
+            <p><code>There are no mapped items ready to transfer items.</code></p>
+        {% endif %}
+
+
+
+        <hr/>
+        <p><a href="{{ url('searchplus/algolia/manageIndex/'~index.id~'') }}">&larr; Back to Index Index</a></p>
+
+
+    </div>
+
+    {% includejs %}
+    Craft.cp.trackTaskProgress();
+    {% endincludejs %}
+{% endblock %}

@@ -18,7 +18,7 @@
 {% block content %}
 <div class="container bands">
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-6">
             <h1>{{ entry.title }}</h1>
         </div>
         <div class="row">
@@ -27,7 +27,7 @@
                 {# Fetches the first image #}
                 {% set image = entry.bandsImage.first() %}
                 {% if image %}
-                <img class="avatar" src="../{{ image.url }}" alt="">
+                <img class="avatar" src="{{siteUrl}}{{ image.url }}" alt="">
                 {% endif %}
             </div>
 
@@ -49,17 +49,10 @@
                 {# Fetches the first image #}
                 {% set image = entry.bandsImage.first() %}
                 {% if image %}
-                <img class="avatar" src="../{{ image.url }}" alt="">
+                <img class="avatar" src="{{siteUrl}}{{ image.url }}" alt="">
                 {% endif %}
             </div>
 
-            <div class="col-md-12">
-                <div class="row body">
-                    <div class="col-md-12">
-                        {{ entry.body }}
-                    </div>
-                </div>
-            </div>
             {% endif %}
 
             <div class="col-md-12">
@@ -67,6 +60,52 @@
                     <div class="col-md-12">
                         {{ entry.body }}
                     </div>
+                    {% for block in entry.social %}
+
+                    {% switch block.type %}
+
+                    {% case "socialmatrix" %}
+                    {% if block.facebook|length or block.twitter|length or block.linkedin|length or block.soundcloud|length or block.instagram|length%}
+
+                    <div class="col-md-12">
+
+                        <div class="social">
+                            <h5>Social Media</h5>
+                            <ul>
+                                {% if block.facebook|length %}
+                                <li><a href="http://{{ block.facebook.url }}"><i class="fab fa-facebook-f"></i> {{block.facebook.text}}</a>
+                                </li>
+                                {% endif %}
+
+                                {% if block.twitter|length %}
+                                <li><a href="http://{{ block.twitter.url }}"><i class="fab fa-twitter"></i> {{block.twitter.text}}</a>
+                                </li>
+                                {% endif %}
+
+                                {% if block.linkedin|length %}
+                                <li><a href="http://{{ block.linkedin.url }}"><i class="fab fa-linkedin"></i> {{block.linkedin.text}}</a>
+                                </li>
+                                {% endif %}
+
+                                {% if block.soundcloud|length %}
+                                <li><a href="http://{{ block.soundcloud.url }}"><i class="fab fa-soundcloud"></i> {{block.soundcloud.text}}</a>
+                                </li>
+                                {% endif %}
+
+                                {% if block.instagram|length %}
+                                <li><a href="http://{{ block.instagram.url }}"><i class="fab fa-instagram"></i> {{block.instagram.text}}</a>
+                                </li>
+                                {% endif %}
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    {% endif %}
+                    {% default %}
+                    {% endswitch %}
+                    {% endfor %}
+
                 </div>
             </div>
 
@@ -108,6 +147,18 @@
                     </div>
                     {% endif %}
                     {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+
+            {% if entry.youtubeUrl | length %}
+            <div class="col-md-12">
+                <div class="row youtube">
+                    <div class="col-md-12 nopadding">
+                        <h3>Youtube</h3>
+                    </div>
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/{{ entry.youtubeUrl }}"
+                            frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                 </div>
             </div>
             {% endif %}

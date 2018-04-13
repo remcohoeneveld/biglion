@@ -1,0 +1,20 @@
+<table class="data fullwidth">
+    <thead>
+    <tr>
+        <th>Remote Index Name</th>
+        <th>Entries</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for index in indexes %}
+        <tr>
+            <td>
+                <code>{{ index.remoteName }}</code></a>
+            </td>
+            <td>{{ index.entries }}</td>
+            <td><a href="https://www.algolia.com/explorer#?index={{ index.remoteName }}" target="_blank"><span class="go nowrap">View Index</span></a></td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>

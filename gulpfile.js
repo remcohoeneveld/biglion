@@ -2,8 +2,8 @@
 var config = {};
 
 //basics
-config.siteName = 'remcohoeneveld';
-config.proxyDomain = 'remcohoeneveld.local';
+config.siteName = 'biglionpromotions';
+config.proxyDomain = 'biglion.local';
 
 //source directory
 config.src = 'source/';

@@ -24,12 +24,11 @@
       color: $gold;
       height: 100%;
 
-      span{
+      span {
         transform: translate(-50%, -50%);
         position: absolute;
         margin-top: 100px;
       }
-
 
       -moz-transition: all 0.3s;
       -webkit-transition: all 0.3s;
@@ -45,7 +44,7 @@
       }
       .centered {
         width: 110%;
-        height:110%;
+        height: 110%;
         font-size: 2.2rem;
       }
     }
@@ -57,53 +56,59 @@
       &:hover {
         background-color: $gold;
         border-color: $gold;
-        color: $textcolor;
+        color: $black;
       }
     }
   }
 }
 
-.artist,.spotify,.youtube,.soundcloud {
+.artist, .spotify, .youtube, .soundcloud {
   h1 {
     display: inline-block;
-    padding: 0;
     margin-top: 20px;
-    min-width: 100%;
-    color: $textcolor;
+    font-size: 2.2em;
+    background: $grey;
+    color: white;
+    padding: 10px;
+    width: 70%;
+    text-align: center;
   }
-  .nopadding{
+  .nopadding {
     padding: 0;
   }
-  h3{
+  h3 {
     display: inline-block;
     padding: 13px;
     background: $gold;
-    color: $textcolor;
+    color: $black;
     margin: 20px 0;
   }
-  span{
-    background-color: darkgrey;
-    color: white;
-    padding: 5px;
-    margin: 10px 0;
-    font-style: oblique;
+  .profession {
+    background-color: $gold;
+    padding: 20px 0;
     font-size: 15px;
-    font-weight: lighter;
+    margin-top: 20px;
+    width: 25%;
+    text-align: center;
+    float: right;
+    color: $black;
+    font-style: italic;
+    font-weight: bold;
   }
-  p{
+  p {
     margin-top: 10px;
   }
-  .shows,.bands{
+  .shows, .bands {
     margin-top: 20px;
-    h3{
+    h3 {
       background-color: $gold;
-      color: #000000;
+      color: $black;
       padding: 20px;
       display: inline-block;
       margin: 0 auto;
       font-weight: 200;
     }
-    img{
+    img {
       padding: 10px 0;
     }
   }

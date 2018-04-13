@@ -1,0 +1,61 @@
+{% extends "searchplus/_layouts/cp" %}
+{% set selectedSubnavItem = 'logs' %}
+
+{% set title = "Log Item : "~ log.type %}
+
+{% set crumbs = [
+{ label: "SearchPlus"|t, url: url('searchplus') },
+{ label: "Log"|t, url: url('searchplus/logs') },
+{ label: "View"|t, url: url('searchplus/logs/'~ log.id) }
+] %}
+
+
+
+{% block content %}
+<div class="elementindex">
+    {% include 'searchplus/_includes/logTable' with { 'threads' : { 0 : { 0 : log }}, 'showDetails' : true } only %}
+
+
+    {% if relatedLogs|length > 1 %}
+    <hr/>
+
+    <h3>Related Log Items</h3>
+    <p>The following items were also logged during this request.</p>
+    
+    {% include 'searchplus/_includes/logTable' with 
+        { 'threads' : { 1 : relatedLogs }, 
+            'relatedTo' : log.id, 
+            'tableId' : 'relatedlogs' }
+        only %}
+    {% endif %}
+
+    <hr/>
+    <div id="n" class="buttons">
+        <form method="post" action="">
+            {{ getCsrfInput() }}
+            <input type="hidden" name="action" value="searchPlus/log/clearByRequest"/>
+            <input type="hidden" name="requestKey" value="{{ log.requestKey }}"/>
+            <input type="submit" class="btn submit"
+                   value="{{ 'Clear Logs for Request'|t }}"/>
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+
+{% set js %}
+    new Craft.AdminTable({
+        tableSelector: '#logs',
+        noObjectsSelector: '#nologs',
+        deleteAction: 'searchPlus/log/deleteLog',
+    });
+
+    new Craft.AdminTable({
+        tableSelector: '#relatedlogs',
+        noObjectsSelector: '#norelatedlogs',
+        deleteAction: 'searchPlus/log/deleteLog',
+    });
+{% endset %}
+{% includeJs js %}
+
+

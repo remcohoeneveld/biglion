@@ -1,0 +1,19 @@
+{%- macro cs_Date(data) %}
+
+	{{ _self.codeBlock('Sample date formatting', '
+		{% if ' ~ data.sampleTag ~ ' %}\n'
+		~ data.whitespace
+		~ '{{ ' ~ data.sampleTag ~ ' | date(\'M j, Y\') }}\n'
+		~ '{% endif %}'
+	)}}
+
+
+	{{ _self.codeBlock('Get the Unix timestamp of the date', '
+		{{ ' ~ data.sampleTag ~ '.getTimestamp() }}'
+	)}}
+
+	<div class="extra">
+		<p>There are many methods you can use on date fields. More documentation available <a href="http://buildwithcraft.com/docs/templating/datetime">here</a>.</p>
+	</div>
+
+{% endmacro -%}

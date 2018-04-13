@@ -1,0 +1,33 @@
+{% extends "_layouts/cp" %}
+{% hook 'searchPlus.prepCpTemplate' %}
+{% requireAdmin %}
+{% set selectedSubnavItem = 'settings' %}
+{% import '_includes/forms' as forms %}
+
+{% set title = "Search Plus Settings"|t %}
+
+{% set navItems = {
+    'license': { title: "License"|t },
+    'settings': { heading: "Settings"|t },
+    'algolia': { title: "Algolia Credentials"|t },
+    'developer': { heading: "Developer"|t },
+    'logs': { title: "Logging"|t },
+    'mappings': { title: "Mappings"|t },
+} %}
+
+{% set selectedItem = craft.request.getSegment(3) %}
+{% if selectedItem == '' %}{% set selectedItem = 'license' %}{% endif %}
+
+{% block sidebar %}
+    <nav>
+        <ul>
+            {% for id, item in navItems %}
+                {% if item.heading is defined %}
+                    <li class="heading"><span>{{ item.heading }}</span></li>
+                {% else %}
+                    <li><a href="{{ url('searchplus/settings/'~id) }}"{% if id == selectedItem %} class="sel"{% endif %}>{{ item.title }}</a></li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </nav>
+{% endblock %}

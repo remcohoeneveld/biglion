@@ -1,0 +1,31 @@
+{% extends "searchplus/_layouts/cp" %}
+{% set selectedSubnavItem = 'logs' %}
+
+{% set crumbs = [
+{ label: "SearchPlus"|t, url: url('searchplus') },
+{ label: "Log"|t, url: url('searchplus/logs') }
+] %}
+
+{% block pageTitle %}
+	<form method="post">
+		<h1>SearchPlus Logs</h1>
+		{{ getCsrfInput() }}
+		{% if threaded %}
+			<input type="hidden" name="action" value="searchPlus/log/clearAll"/>
+			<div id="revisionbtn" class="btn formsubmit" data-confirm="Are you sure you want to clear all the logs?">Clear</div>
+		{% endif %}
+	</form>
+{% endblock %}
+
+{% block content %}
+	{% include 'searchplus/_includes/logTable' with { 'threads' : threaded, 'fadeOut' : true, 'paginate' : true } %}
+{% endblock %}
+{% set js %}
+	new Craft.AdminTable({
+	tableSelector: '#logs',
+	noObjectsSelector: '#nologs',
+	deleteAction: 'searchPlus/log/deleteLog',
+	});
+{% endset %}
+{% includeJs js %}
+

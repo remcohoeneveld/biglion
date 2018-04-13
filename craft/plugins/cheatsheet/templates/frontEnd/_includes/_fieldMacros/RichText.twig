@@ -1,0 +1,11 @@
+{%- macro cs_RichText(data) %}
+
+	{{ _self.codeBlock('Field name', '
+		{{ ' ~ data.sampleTag ~ ' }}'
+	)}}
+
+	{{ _self.codeBlock('"If exists" conditional', '
+		{% if ' ~ data.sampleTag ~ '|length %} ... {% endif %}'
+	)}}
+
+{% endmacro -%}

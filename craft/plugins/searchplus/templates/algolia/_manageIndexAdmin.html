@@ -1,0 +1,129 @@
+{% extends "searchplus/_layouts/cp" %}
+
+{% set crumbs = [
+{ label: "Indexes"|t, url: url('searchplus') },
+{ label: "Manage : "~index.name|t, url: url('searchplus/manageIndex'~index.id) },
+{ label: "Admin Options"|t, url: url('searchplus/manageIndex/'~index.id~'/admin') },
+] %}
+
+
+
+{%- includeJsResource "SearchPlus/cp/js/searchplus.js" -%}
+
+{% block content %}
+    <h1><code>{{ index.name }}</code> : Admin Options</h1>
+    <div class="field">
+        <p class="warning">These actions are potentially destructive to the <strong>index and index data</strong><br/>
+            All <strong>Craft</strong> data is <strong>safe</strong> and will not be affected.<br/>
+            All actions require confirmation before executing
+
+        <p>
+
+            <a href="{{ url('searchplus/algolia/manageIndex/'~index.id) }}">&larr; Back to Index Options</a>
+    </div>
+    <hr/>
+    <h2>Un-map</h2>
+    <p>Remove our local Craft mapping for this index. This will disconnect the index. <br/><em>The Index and index data
+            will be left intact</em></p>
+
+    <a href="#" class="btn" id="unmapmodalshow">Un-Map Index</a>
+
+    <div id="unmapform" style="display:none" class="modal alert fitted">
+        <div class="body">
+            <form method="post" accept-charset="UTF-8" data-saveshortcut="">
+                <input type="hidden" name="action" value="searchPlus/algolia/manageIndexAdmin">
+                <input type="hidden" name="redirect" value="searchplus/algolia/manageIndex/{{ index.id }}">
+                <input type="hidden" name="indexId" value="{{ index.id }}">
+                <input type="hidden" name="type" value="unmap">
+                {{ getCsrfInput() }}
+
+
+                <h2>Un-Map Index <code>{{ index.handle }}</code></h2>
+
+                <p class="warning">This operation cannot be cancelled</p>
+
+                <p>Please confirm by typing the index handle in the following field</p>
+
+                <div class="field">
+                    <input name="confirm" type="text" class="text fullwidth" placeholder="Index name.." value="" autocomplete="off"/>
+                </div>
+
+                <input type="submit" value="Un-map Index" class="btn"/>
+            </form>
+        </div>
+    </div>
+
+    <hr/>
+
+
+    <h2>Clear Index</h2>
+
+    <p>Clear the contents of the index completely. <br/><em>This will leave the empty index in place</em></p>
+    <a href="#" class="btn" id="clearmodalshow">Clear Index</a>
+
+
+    <div id="clearform" style="display:none" class="modal alert fitted">
+        <div class="body">
+            <form method="post" accept-charset="UTF-8" data-saveshortcut="">
+                <input type="hidden" name="action" value="searchPlus/algolia/manageIndexAdmin">
+                <input type="hidden" name="redirect" value="searchplus/algolia/manageIndex/{{ index.id }}">
+                <input type="hidden" name="indexId" value="{{ index.id }}">
+                <input type="hidden" name="type" value="clear">
+                {{ getCsrfInput() }}
+
+                <h2>Clear Index <code>{{ index.handle }}</code></h2>
+
+                <p class="warning">This operation cannot be canceled</p>
+
+                <p>Please confirm by typing the index handle in the following field</p>
+
+                <div class="field">
+                    <input name="confirm" type="text" class="text fullwidth" placeholder="Index name.." value="" autocomplete="off"/>
+                </div>
+
+
+                <input type="submit" value="Clear Index" class="btn"/>
+            </form>
+        </div>
+    </div>
+
+    <hr/>
+
+
+    <h2>Delete Index</h2>
+
+    <p>Delete the Index. <br/><em>This will <strong>fully delete</strong> the index and all it's contents</em></p>
+    <a href="#" class="btn submit" id="deletemodalshow">Delete Index</a>
+
+    <div id="deleteform" style="display:none" class="modal alert fitted">
+
+        <div class="body">
+            <form method="post" accept-charset="UTF-8" data-saveshortcut="" class="">
+                <input type="hidden" name="action" value="searchPlus/algolia/manageIndexAdmin">
+                <input type="hidden" name="redirect" value="searchplus/algolia">
+                <input type="hidden" name="indexId" value="{{ index.id }}">
+                <input type="hidden" name="type" value="delete">
+                {{ getCsrfInput() }}
+
+                <h2>Delete Index <code>{{ index.handle }}</code></h2>
+
+                <p class="warning">This operation cannot be canceled</p>
+
+                <p>Please confirm by typing the index handle in the following field</p>
+
+                <div class="field">
+                    <input name="confirm" type="text" class="text fullwidth" placeholder="Index name.." value="" autocomplete="off"/>
+                </div>
+                <input type="submit" class="btn submit" value="Delete Index"/>
+
+            </form>
+        </div>
+
+    </div>
+
+    <hr/>
+
+    <a href="{{ url('searchplus/algolia/manageIndex/'~index.id) }}">&larr; Back to Index Options</a>
+
+
+{% endblock %}

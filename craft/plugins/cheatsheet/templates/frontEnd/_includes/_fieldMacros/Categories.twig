@@ -1,0 +1,38 @@
+{%- macro cs_Categories(data) %}
+
+	{{ _self.codeBlock('Check if entry has categories', '
+		{% if ' ~ data.sampleTag ~ '|length %}\n'
+		~ data.whitespace ~ '...\n'
+		~ '{% endif %}'
+	)}}
+
+
+	{{ _self.codeBlock('Rename for easier access', '
+		{% set categories = '
+		~ data.sampleTag
+		~ ' %}\n'
+		~ '{% if categories|length %}\n'
+		~ data.whitespace ~ '<h3>My Categories<h3/>\n'
+		~ data.whitespace
+		~ '{% nav myCategory in categories %}\n'
+		~ data.whitespace ~ data.whitespace ~ '...\n'
+		~ data.whitespace ~ '{% endnav %}\n'
+		~ '{% endif %}'
+	)}}
+
+
+	{{ _self.codeBlock('Pass parameters to the ElementCriteria Model', '
+		{% set myCategories = ' ~ data.sampleTag ~ '.order(\'name\') %}'
+	)}}
+
+
+	{{ _self.codeBlock('Select just the first category', '
+		{% set myCategory = '
+		~ data.sampleTag
+		~ '.first() %}\n'
+		~ '{% if myCategory %}\n'
+		~ data.whitespace ~ '...\n'
+		~ '{% endif %}'
+	, 'This is mostly used in a scenario where you only expect one category to be selected. The result is still a "set" of categories so we just grab the "first" one.')}}
+
+{% endmacro -%}

@@ -1,0 +1,38 @@
+{% extends "searchplus/_layouts/cp" %}
+
+{% set crumbs = [
+{ label: "Indexes"|t, url: url('searchplus') },
+] %}
+
+
+
+{% block content %}
+
+    <h1>Algolia</h1>
+
+    {% if connected %}
+
+        {% if connectedIndexes is defined %}
+        <h2>Connected Indexes</h2>
+        <p>The following indexes are connected to Craft. When items are added, removed or updated in Craft, the index will be automatically kept in sync.</p>
+        {% include 'searchplus/_includes/indexTable' with { indexes : connectedIndexes } only %}
+        <hr/>
+        {% endif %}
+
+        <h2>Create a New Index</h2>
+        {% if canCreateIndex %}
+        <p><a href="{{ url('searchplus/algolia/editIndex') }}" class="btn submit icon add">New Index</a></p>
+        {% else %}
+            <p><a href="#" class="btn submit icon add disabled">New Index</a> <a class="btn" href="{{ url('searchplus/settings/license') }}">Upgrade to Pro to add more Indexes</a></p>
+        {% endif %}
+        {% if unconnectedIndexes is defined %}
+            <p><a href="{{ url('searchplus/unconnected') }}">+{{ unconnectedIndexes|length }} Unconnected Index{% if unconnectedIndexes|length > 1 %}es{% endif %} also available</a></p>
+        {% endif %}
+
+
+    {% else %}
+        <p>It doesn't look like Algolia has been configured. <a href="{{ url('searchplus/settings/algolia') }}">Setup
+                Now</a></p>
+    {% endif %}
+{% endblock %}
+

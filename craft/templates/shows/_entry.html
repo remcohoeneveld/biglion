@@ -1,18 +1,3 @@
-{#
-# News entry template
-# -------------------
-#
-# This template gets loaded whenever a News entry’s URL is
-# requested. That’s because the News section’s Template setting is
-# set to “news/_entry”, the path to this template.
-#
-# When this template is loaded, it will already have an ‘entry’
-# variable, set to the requested News entry.
-#
-# See this page for more details on how Craft routes requests:
-# http://craftcms.com/docs/routing
-#}
-
 {% extends "_layout" %}
 
 {% block content %}
@@ -22,7 +7,7 @@
             {# Fetches the first image #}
             {% set image = entry.showsImage.first() %}
             {% if image %}
-            <img style="object-position: {{ entry.headerPosition }}" src="../{{ image.url }}" alt="">
+            <img style="object-position: {{ entry.headerPosition }}" src="{{siteUrl}}{{ image.url }}" alt="">
             {% endif %}
             <article>
                 <h1>{{ entry.title }}</h1>
@@ -30,6 +15,54 @@
                 {{ entry.body }}
             </article>
         </div>
+
+        {% for block in entry.social %}
+
+        {% switch block.type %}
+
+        {% case "socialmatrix" %}
+        {% if block.facebook|length or block.twitter|length or block.linkedin|length or block.soundcloud|length or block.instagram|length%}
+
+        <div class="col-md-12">
+
+            <div class="social">
+                <h5>Social Media</h5>
+                <ul>
+                    {% if block.facebook|length %}
+
+                    <li><a href="http://{{ block.facebook.url }}"><i class="fab fa-facebook-f"></i> {{block.facebook.text}}</a>
+                    </li>
+                    {% endif %}
+
+                    {% if block.twitter|length %}
+                    <li><a href="http://{{ block.twitter.url }}"><i class="fab fa-twitter"></i> {{block.twitter.text}}</a>
+                    </li>
+                    {% endif %}
+
+                    {% if block.linkedin|length %}
+                    <li><a href="http://{{ block.linkedin.url }}"><i class="fab fa-linkedin"></i> {{block.linkedin.text}}</a>
+                    </li>
+                    {% endif %}
+
+                    {% if block.soundcloud|length %}
+                    <li><a href="http://{{ block.soundcloud.url }}"><i class="fab fa-soundcloud"></i> {{block.soundcloud.text}}</a>
+                    </li>
+                    {% endif %}
+
+                    {% if block.instagram|length %}
+                    <li><a href="http://{{ block.instagram.url }}"><i class="fab fa-instagram"></i> {{block.instagram.text}}</a>
+                    </li>
+                    {% endif %}
+
+                </ul>
+            </div>
+        </div>
+
+        {% endif %}
+        {% default %}
+        {% endswitch %}
+        {% endfor %}
+
 
         {% set bands = entry.showsBands %}
         {% if bands | length %}
@@ -58,7 +91,7 @@
                 <div class="col-md-12 nopadding">
                     <h3>Youtube</h3>
                 </div>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ entry.youtubeUrl }}"
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/{{ entry.youtubeUrl }}"
                         frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             </div>
         </div>

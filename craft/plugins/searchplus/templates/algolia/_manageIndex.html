@@ -1,0 +1,104 @@
+{% extends "searchplus/_layouts/cp" %}
+
+{% set crumbs = [
+{ label: "Indexes"|t, url: url('searchplus') },
+{ label: "Manage : "~index.name|t, url: url('searchplus/manageIndex/'~index.id) },
+] %}
+
+
+
+{% block content %}
+    <div class="searchplus-container">
+        <h1>{{ index.name }}</h1>
+        <h2><code>{{ index.handle }}</code></h2>
+
+        <h2>Status</h2>
+
+        <form method="post" accept-charset="UTF-8"
+              class="algolia-populatetask"
+              action="{{ actionUrl('searchPlus/algolia/startPopulationTask') }}">
+
+                <input type="hidden" name="redirect" value="searchplus/algolia/manageIndex/{{ index.id }}">
+                <input type="hidden" name="indexId" value="{{ index.id }}">
+                {{ getCsrfInput() }}
+
+        <div class="index-status fields">
+            {% if index.populationStatus == 'empty' %}
+                <span class="status expired"></span><span class="title">Index Unpopulated</span>
+            {% elseif index.populationStatus == 'uptodate' %}
+                <span class="status live"></span><span class="title">Index Up-to-date</span>
+            {% elseif index.populationStatus == 'outofsync' %}
+                <span class="status pending"></span><span class="title">Index Out-of-sync</span>
+            {% else %}
+                <span class="status "></span><span class="title">Unknown</span>
+            {% endif %}
+
+            <p><strong>{{ index.elements }}</strong> elements in Craft, <strong><span class="index-count">{{ index.entries|number_format() }}</span></strong> items in index</p>
+
+            {% if not canPopulateUnlimited %}
+                {% if index.elements > itemPopulateLimit %}
+                    <p class="warning"><strong>You're running Search Plus Free and can only index a maximum of {{ itemPopulateLimit }} per index.</strong><br/> <a href="{{ url('searchplus/settings/license') }}">Upgrade to Pro for unlimited items per index</a></p>
+                {% endif %}
+            {% endif %}
+            {#
+            <form method="post" accept-charset="UTF-8"
+                  class="algolia-indexpopulate"
+                  action="{{ actionUrl('searchPlus/algolia/repopulateIndex') }}">
+                <input type="hidden" name="redirect" value="searchplus/algolia/manageIndex/{{ index.id }}">
+                <input type="hidden" name="indexId" value="{{ index.id }}">
+                <input type="hidden" name="firstrun" value="1">
+                {{ getCsrfInput() }}
+
+                <div class="ajaxstatus-container">
+                    <div class="fields">
+                        <input type="submit" value="Populate Index" class="btn submit"/>
+                    </div>
+                    <div class="progressbar pending" style="display:none">
+                        <div class="progressbar-inner" style="width: 100%;"></div>
+                    </div>
+                    <div class="alldone" data-icon="done" style="display:none"></div>
+                </div>
+            </form>
+#}
+
+            <input type="submit" value="Start Index Population Task" class="btn submit"/>
+
+
+        </div>
+            <div class="ajaxstatus-container">
+                <div class="progressbar pending" style="display:none">
+                    <div class="progressbar-inner" style="width: 100%;"></div>
+                </div>
+                <div class="alldone" style="display:none">
+                    <span data-icon="done" class="icon"></span> Population Task in-progress
+                </div>
+
+                <div class="errored" style="display:none">
+                    <span data-icon="error" class="icon"></span> Error starting population task
+                </div>
+            </div>
+
+        </form>
+        <hr/>
+
+        <h2>Index Details</h2>
+        <p><a href="https://www.algolia.com/explorer#?index={{ index.handle }}" target="_blank"><span class="go nowrap">Overview on Algolia</span></a></p>
+
+
+        <h2>Index Stats</h2>
+        <p><a href="https://www.algolia.com/explorer#?index={{ index.handle }}&tab=stats" target="_blank"><span class="go nowrap">View Stats on Algolia</span></a></p>
+
+        <p><a href="{{ url('searchplus/algolia/editIndex/'~index.id) }}" class="btn">Edit Index</a></p>
+
+        <hr/>
+
+        <p><a href="{{ url('searchplus/algolia/manageIndex/'~index.id~'/admin') }}">Index Management Options &rarr;</a></p>
+        <a href="{{ url('searchplus/algolia/manageIndex/'~index.id~'/populate') }}" style="color:grey; opacity:0.7">Debug Population Options</a>
+
+    </div>
+
+    {% includejs %}
+    Craft.cp.trackTaskProgress();
+    {% endincludejs %}
+{% endblock %}
+

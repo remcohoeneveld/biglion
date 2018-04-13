@@ -1,0 +1,23 @@
+{% extends "searchplus/_layouts/cp" %}
+
+{% set crumbs = [
+{ label: "Indexes"|t, url: url('searchplus') },
+] %}
+
+
+
+{% block content %}
+    <h1>Unconnected Indexes</h1>
+    <p>An index is <em>unconnected</em> if it exists on the Algolia service, but we have no local Craft mapping for it.</p>
+
+    <p>These unconnected indexes are still usable on the front-end, but will not be updated or touched by Craft or Search Plus.</p>
+
+    {% if unconnectedIndexes is defined %}
+    {% include 'searchplus/_includes/unconnectedIndexTable' with { indexes : unconnectedIndexes } only %}
+    {% endif %}
+
+    <hr/>
+    <p><a href="{{ url('searchplus') }}">&larr; Back to the Indexes</a></p>
+
+{% endblock %}
+

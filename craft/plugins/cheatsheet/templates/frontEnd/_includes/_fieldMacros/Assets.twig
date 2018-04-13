@@ -1,0 +1,116 @@
+{%- macro cs_Assets(data) %}
+
+
+	{{ _self.codeBlock('Total number of assets', '
+		{{ ' ~ data.sampleTag ~ '|length }}'
+	)}}
+
+
+	{{ _self.codeBlock('Common conditional', '
+		{% if ' ~ data.sampleTag ~ '|length %}\n'
+		~ data.whitespace ~ '...\n'
+		~ '{% endif %}'
+	)}}
+
+
+	{{ _self.codeBlock('Loop through assets', '
+		{% for myAsset in '
+		~ data.sampleTag
+		~ ' %}\n'
+		~ data.whitespace
+		~ '{{ myAsset.url }}\n{% endfor %}'
+	)}}
+
+
+	{{ _self.codeBlock('Only return the first asset', '
+		{% set myAsset = '
+		~ data.sampleTag
+		~ '.first() %}\n{% if myAsset %}\n'
+		~ data.whitespace
+		~ '{{ myAsset.url }}\n{% endif %}'
+	)}}
+
+
+	{{ _self.codeBlock('Adjusting the limit', '
+		{% for block in ' ~ data.sampleTag ~ '.limit(5) %}'
+	)}}
+
+
+	{{ _self.codeBlock('All asset variables', '
+		{% set myAsset = '
+		~ data.sampleTag
+		~ '.first() %}\n{% if myAsset %}\n'
+		~ data.whitespace
+		~ '{{ myAsset.dateCreated }}\n'
+		~ data.whitespace
+		~ '{{ myAsset.dateUpdated }}\n'
+		~ data.whitespace
+		~ '{{ myAsset.extension }}\n'
+		~ data.whitespace
+		~ '{{ myAsset.filename }}\n'
+		~ data.whitespace
+		~ '{{ myAsset.folder }}\n'
+		~ data.whitespace
+		~ '{{ myAsset.folderId }}\n'
+		~ data.whitespace
+		~ '{{ myAsset.height }}\n'
+		~ data.whitespace
+		~ '{{ myAsset.id }}\n'
+		~ data.whitespace
+		~ '{{ myAsset.img }}\n'
+		~ data.whitespace
+		~ '{{ myAsset.kind }}\n'
+		~ data.whitespace
+		~ '{{ myAsset.locale }}\n'
+		~ data.whitespace
+		~ '{{ myAsset.link }}\n'
+		~ data.whitespace
+		~ '{{ myAsset.mimeType }}\n'
+		~ data.whitespace
+		~ '{{ myAsset.next }}\n'
+		~ data.whitespace
+		~ '{{ myAsset.prev }}\n'
+		~ data.whitespace
+		~ '{{ myAsset.size }}\n'
+		~ data.whitespace
+		~ '{{ myAsset.source }}\n'
+		~ data.whitespace
+		~ '{{ myAsset.sourceId }}\n'
+		~ data.whitespace
+		~ '{{ myAsset.url }}\n'
+		~ data.whitespace
+		~ '{{ myAsset.width }}\n{% endif %}'
+	)}}
+
+
+	{{ _self.codeBlock('All asset methods', '
+		{% set myAsset = '
+		~ data.sampleTag
+		~ '.first() %}\n{% if myAsset %}\n'
+		~ data.whitespace
+		~ '{{ myAsset.getExtension() }}\n'
+		~ data.whitespace
+		~ '{{ myAsset.getFolder() }}\n'
+		~ data.whitespace
+		~ '{{ myAsset.getHeight( transform ) }}\n'
+		~ data.whitespace
+		~ '{{ myAsset.getImg() }}\n'
+		~ data.whitespace
+		~ '{{ myAsset.getLink() }}\n'
+		~ data.whitespace
+		~ '{{ myAsset.getMimeType() }}\n'
+		~ data.whitespace
+		~ '{{ myAsset.getNext( params ) }}\n'
+		~ data.whitespace
+		~ '{{ myAsset.getPrev( params ) }}\n'
+		~ data.whitespace
+		~ '{{ myAsset.getSource() }}\n'
+		~ data.whitespace
+		~ '{{ myAsset.getUrl( transform ) }}\n'
+		~ data.whitespace
+		~ '{{ myAsset.getWidth( transform ) }}\n'
+		~ data.whitespace
+		~ '{{ myAsset.setTransform( transform ) }}\n{% endif %}'
+	)}}
+
+{% endmacro -%}

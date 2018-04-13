@@ -1,0 +1,18 @@
+{%- macro cs_Number(data) %}
+
+	{{ _self.codeBlock('Field name', '
+		{{ ' ~ data.sampleTag ~ ' }}'
+	)}}
+
+
+	{{ _self.codeBlock('Comparison conditional</td>', '
+		{% if ' ~ data.sampleTag ~ ' > 0 %} ... {% endif %}'
+	)}}
+
+
+	{{ _self.codeBlock('Operations', '
+		{% set myResult = 42 * ' ~ data.sampleTag ~ ' %}'
+		~ '\n\nThe total is {{ myResult }}'
+	)}}
+
+{% endmacro -%}

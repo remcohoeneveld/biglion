@@ -1,0 +1,7 @@
+{%- macro cs_Lightswitch(data) %}
+
+	{{ _self.codeBlock('Boolean Conditional', '
+		{% if ' ~ data.sampleTag ~ ' %} ... {% endif %}'
+	)}}
+
+{% endmacro -%}

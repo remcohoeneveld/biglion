@@ -1,16 +1,36 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
 <head>
     <meta charset="utf-8"/>
-    <title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% hook 'seomaticRender' %}
+
+    <title>{{ siteName }}{% if title is defined %} - {{ title }}{% endif %}</title>
+
     <link rel="home" href="{{ siteUrl }}"/>
     <!--Import Google Icon Font-->
 
     {# Tell the browser to cache this page for 30 days #}
     {% set expiry = now|date_modify('+30 days') %}
 
-    {% header "Cache-Control: max-age=" ~ (expiry.timestamp - now.timestamp) %}
-    {% header "Pragma: cache" %}
-    {% header "Expires: " ~ expiry|date('D, d M Y H:i:s', 'GMT') ~ " GMT" %}
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ siteUrl}}images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{ siteUrl}}images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ siteUrl}}images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ siteUrl}}images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ siteUrl}}images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ siteUrl}}images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ siteUrl}}images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ siteUrl}}images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ siteUrl}}images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ siteUrl}}images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ siteUrl}}images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{ siteUrl}}images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ siteUrl}}images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="{{ siteUrl}}images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="{{ siteUrl}}images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="transparent">
+
 
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"
@@ -21,18 +41,26 @@
 <body>
 <nav class="navbar navbar-expand-md bg-light">
     <div class="container">
-        <div class="col-md-7">
+        <div class="col-md-5">
             <h1>
                 <span class="big">Big</span>
                 <span class="lion">Lion</span>
                 <span class="promotions">Promotions</span>
             </h1>
         </div>
-        <div class="col-md-5">
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        <div class="col-md-3">
+            <form class="form-inline my-2 my-lg-0"
+                  id="searchform"
+                  data-applicationId="{{ craft.searchPlus.getAlgoliaApplicationId }}"
+                  data-searchApiKey="{{ craft.searchPlus.getAlgoliaSearchApiKey }}"
+                  data-index="{{ craft.searchPlus.index('index-website') }}">
+                <input type="search" class="form-control mr-sm-2" id="searchinput" placeholder="Search.."
+                       autocomplete="off">
             </form>
+            <hr/>
+        </div>
+        <div class="col-md-4">
+            <div id="results"></div>
         </div>
     </div>
 </nav>
@@ -50,7 +78,12 @@
                 <li class="nav-item"><a class="nav-link" href="{{ siteUrl }}bands">Bands</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ siteUrl }}artists">Artists</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ siteUrl}}backline">Backline</a></li>
+                {% for show in craft.entries.section('shows').limit(1).find() %}
+                {% if show|length %}
                 <li class="nav-item"><a class="nav-link" href="{{ siteUrl }}shows">Shows</a></li>
+                {% endif %}
+                {% endfor %}
+                <li class="nav-item"><a class="nav-link" href="{{ siteUrl }}news">News</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ siteUrl }}media">Media</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ siteUrl }}contact">Contact</a></li>
             </ul>
@@ -60,52 +93,138 @@
 
 {% if craft.request.lastSegment == "media" %}
 <main id="media-content" role="main">
-{% else %}
-<main id="content" role="main">
-{% endif %}
-    {% block content %}
-    {% endblock %}
+    {% else %}
+
+    <main id="content" role="main">
+        {% endif %}
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    {% raw %}
+    <!-- Hit template -->
+
+    <script type="text/template" id="hit-template">
+        <ul>
+            {{#hits}}
+            <li>
+                <a href="../../{{ uri }}">{{{ _highlightResult.title.value }}}</a>
+            </li>
+            {{/hits}}
+        </ul>
+    </script>
+
+    <!-- No-Results template -->
+    <script type="text/template" id="no-results-template">
+        <div id="no-results-message" class="well">
+            <p>Sorry, We didn't find any results for the search <em>"{{ query }}"</em>.</p>
+        </div>
+    </script>
+
+    {% endraw %}
+
+    {% set searchPlusJs %}
+    (function() {
+    $(this).searchplus({hitsPerPage:3, searchOnLoad:false});
+    })();
+    {% endset %}
+
+    {% includeJsFile resourceUrl('searchplus/js/searchplus-combined.min.js') %}
+    {% includeJs searchPlusJs %}
+
+    <footer class="page-footer footer">
+        <div class="container foot">
+            <div class="row">
+
+                {% for entry in craft.entries.section('footer').find() %}
+                {% for block in entry.footermatrix %}
+                {% switch block.type %}
+                {% case "contactinfo" %}
+
+                {% if block.adress|length or block.telephone|length or block.email|length%}
+
+                <div class="contact col-md-5">
+
+                    <h5>Contact info</h5>
+                    <ul>
+
+                        {% if block.adress|length %}
+                        <li><p><i class="fas fa-map-marker"></i> Adress:
+                            <span> {{ block.adress }} {# Type: Plain Text #}</span>
+                        </p>
+                        </li>
+                        {% endif %}
+                        {% if block.telephone|length %}
+                        <li><p><i class="fas fa-phone-square"></i> Telephone: <span>{{ block.telephone }} {# Type: Plain Text #}</span>
+                        </li>
+                        {% endif %}
+                        {% if block.email|length %}
+                        <li><p><i class="fas fa-envelope-square"></i> Email: <span>{{ block.email }} {# Type: Plain Text #}</span>
+                        </li>
+                        {% endif %}
+                    </ul>
+                </div>
+
+
+                {% endif %}
+                {% default %}
+                {% endswitch %}
+                {% endfor %}
+
+                {% for block in entry.social %}
+
+                {% switch block.type %}
+
+                {% case "socialmatrix" %}
+                {% if block.facebook|length or block.twitter|length or block.linkedin|length or block.soundcloud|length or block.instagram|length%}
+
+                <div class="social col-md-7">
+                    <h5>Social Media</h5>
+                    <ul>
+                        {% if block.facebook|length %}
+
+                        <li><a href="http://{{ block.facebook.url }}"><i class="fab fa-facebook-f"></i> {{block.facebook.text}}</a>
+                        </li>
+                        {% endif %}
+
+                        {% if block.twitter|length %}
+                        <li><a href="http://{{ block.twitter.url }}"><i class="fab fa-twitter"></i> {{block.twitter.text}}</a>
+                        </li>
+                        {% endif %}
+
+                        {% if block.linkedin|length %}
+                        <li><a href="http://{{ block.linkedin.url }}"><i class="fab fa-linkedin"></i> {{block.linkedin.text}}</a>
+                        </li>
+                        {% endif %}
+
+                        {% if block.soundcloud|length %}
+                        <li><a href="http://{{ block.soundcloud.url }}"><i class="fab fa-soundcloud"></i> {{block.soundcloud.text}}</a>
+                        </li>
+                        {% endif %}
+
+                        {% if block.instagram|length %}
+                        <li><a href="http://{{ block.instagram.url }}"><i class="fab fa-instagram"></i> {{block.instagram.text}}</a>
+                        </li>
+                        {% endif %}
+
+                    </ul>
+                </div>
+                {% endif %}
+                {% default %}
+                {% endswitch %}
+                {% endfor %}
+                {% endfor %}
+            </div>
+        </div>
+        <div class="footer-copyright fixed-bottom">
+            <div class="container">
+                <footer id="footer" class="main-footer">
+                    Copyright {{ now.year }} biglionpromotions.com. All rights reserved
+                </footer>
+            </div>
+        </div>
+    </footer>
 </main>
-
-
-<footer class="page-footer footer">
-    <div class="container foot">
-        <div class="row">
-            <div class="contact col-md-5">
-                <h5>Contact info</h5>
-                <ul>
-                    <li><p><i class="fas fa-map-marker"></i> Adress: <span>234 Wall Street East Newyork, NY 20001</span>
-                    </p>
-                    </li>
-                    <li><p><i class="fas fa-phone-square"></i> Telephone: <span>1800 1234 5678</span>
-                    </li>
-                    <li><p><i class="fas fa-envelope-square"></i> Email: <span>info@biglionevents.com</span>
-                    </li>
-                </ul>
-            </div>
-            <div class="social col-md-7">
-                <h5>Social Media</h5>
-                <ul>
-                    <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
-                    </li>
-                    <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a>
-                    </li>
-                    <li><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                    </li>
-                    <li><a href="#"><i class="fab fa-soundcloud"></i> Soundcloud</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="footer-copyright fixed-bottom">
-        <div class="container">
-            <footer id="footer" class="main-footer">
-                Copyright {{ now.year }} {{ craft.request.serverName }}. All rights reserved
-            </footer>
-        </div>
-    </div>
-</footer>
-
 
 <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -122,7 +241,7 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
 <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-<script src="{{ siteUrl}}assets/js/contact.js"></script>
-<script src="{{ siteUrl}}assets/js/carousel.js"></script>
+<script src="{{ siteUrl}}assets/js/scripts.min.js"></script>
+<!--{{ SocialShareScripts() }}-->
 </body>
 </html>

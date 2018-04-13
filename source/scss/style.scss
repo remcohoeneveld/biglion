@@ -3,6 +3,7 @@
 @import "base/footer";
 @import "base/navbar";
 @import "base/pagination";
+@import "base/social";
 
 // Importing the page styles
 @import "pages/home";
@@ -14,7 +15,7 @@
 @import "pages/media";
 
 body {
-  background: $textcolor;
+  background: $black;
   .row {
     margin: 0;
   }
@@ -25,7 +26,7 @@ body {
 }
 
 #media-content{
-  background: $textcolor;
+  background: $black;
   padding-bottom: 50px;
 }
 
@@ -33,9 +34,14 @@ a {
   color: $gold;
   line-height: 70px;
   &:hover {
-    color: $textcolor;
+    color: $black;
     text-decoration: none;
   }
+}
+
+.col-centered{
+  float: none;
+  margin: 0 auto;
 }
 
 .featureImage {
@@ -52,4 +58,8 @@ a {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
   }
+}
+
+.jumbotron{
+  background-color: $grey-light;
 }

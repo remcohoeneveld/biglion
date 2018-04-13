@@ -1,0 +1,113 @@
+{% extends "searchplus/_layouts/cp" %}
+{% set hideTabs = false %}
+
+{% set crumbs = [
+{ label: "Indexes"|t, url: url('searchplus') },
+{ label: "Edit Index"|t, url: url('searchplus/algolia/editIndex') },
+] %}
+
+{% block content %}
+    {% if new %}
+        <h1>New Index</h1>
+        <p>Let's create a new Index for Algolia searches. Once created we'll define the mapping for the index and setup
+            our initial data population.</p>
+    {% else %}
+        <h1>View Index Mapping</h1>
+        <p>Indexes and their mappings can't be directly altered (yet). Index can be renamed, cleared and deleted from
+            the index options.</p>
+    {% endif %}
+
+
+    {% if index is defined %}
+        {{ forms.errorList(index.getErrors('general')) }}
+    {% endif %}
+
+
+    <form method="post" accept-charset="UTF-8" data-saveshortcut="">
+        <input type="hidden" name="action" value="searchPlus/algolia/editIndex">
+        <input type="hidden" name="redirect" value="searchplus/algolia">
+        {{ getCsrfInput() }}
+        {% if index is defined %}
+            <input type="hidden" name="indexId" value="{{ index.id }}"/>
+        {% endif %}
+
+        <hr/>
+
+        {{ forms.textField({
+            label: "Name"|t,
+            instructions: 'What this index will be called in the CP',
+            id: 'name',
+            name: 'name',
+            autofocus: true,
+            required: true,
+            value: (index is defined ? index.name ),
+            errors: (index is defined ? index.getErrors('name'))
+        }) }}
+
+        {{ forms.textField({
+            label: "Handle"|t,
+            instructions: 'How you\'ll refer to this index in the templates',
+            id: 'handle',
+            name: 'handle',
+            class: 'code',
+            required: true,
+            value: (index is defined ? index.handle ),
+            errors: (index is defined ? index.getErrors('handle'))
+        }) }}
+
+        {#
+        {{ forms.lightswitchField({
+            label: "Should we enable multi-enviroments for this index?"|t,
+            instructions: "With enviroments enabled, we'll create domain specific indexes to keep content seperated between dev, stage, production etc..",
+            id: 'enviroments',
+            name: 'enviroments',
+            disabled:true
+        }) }}
+#}
+        <hr/>
+
+        <h2>Content</h2>
+
+        {% include 'searchplus/_includes/mappingField' %}
+
+        <hr/>
+
+        <h2>Handling</h2>
+        {{ forms.selectField({
+            label: "Mapping",
+            instructions: "How we will map the content from Craft, into something Algolia understands",
+            required: true,
+            options: mappingOptions,
+            name: 'contentMap',
+            id: 'contentMap',
+            value: (index is defined ? index.contentMap ),
+            errors: (index is defined ? index.getErrors('contentMap'))
+        }) }}
+
+
+        <hr/>
+
+            <div class="buttons">
+                <input class="btn submit" type="submit" value="{% if (index is defined and index.id) %}Update Index{% else %}Create Index{% endif %}">
+            </div>
+            <ul id="alerts" class="index-change-alert hidden">
+                <li>Your Index settings have changed. Changes won't be reflected until an index repopulation</li>
+            </ul>
+
+            <p><a href="{{ url('searchplus/algolia') }}">&larr; Back to Index List</a>{% if not new %}&nbsp; <a href="{{ url('searchplus/algolia/manageIndex/'~index.id) }}">Index Options &rarr;</a>{% endif %}</p>
+
+    </form>
+
+
+{% endblock %}
+
+
+{% if (index is defined and index.id) %}
+    {% includejs %}
+    $('input').on('change', function() {
+        $('.index-change-alert').removeClass('hidden');
+    });
+    {% endincludejs %}
+{% else %}
+    {% includejs "window.slugGenerator = new Craft.SlugGenerator('#name', '#handle');" %}
+{% endif %}
