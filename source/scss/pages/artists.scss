@@ -28,6 +28,7 @@
         transform: translate(-50%, -50%);
         position: absolute;
         margin-top: 100px;
+        width: 100%;
       }
 
       -moz-transition: all 0.3s;
@@ -46,6 +47,9 @@
         width: 110%;
         height: 110%;
         font-size: 2.2rem;
+        span{
+          width: 100%;
+        }
       }
     }
   }
@@ -72,9 +76,6 @@
     padding: 10px;
     width: 70%;
     text-align: center;
-  }
-  .nopadding {
-    padding: 0;
   }
   h3 {
     display: inline-block;
@@ -106,7 +107,6 @@
       padding: 20px;
       display: inline-block;
       margin: 0 auto;
-      font-weight: 200;
     }
     img {
       padding: 10px 0;
@@ -117,8 +117,12 @@
     max-height: 400px;
     object-fit: cover;
     object-position: top;
-    padding: 15px;
-    margin-top: 20px;
+    padding: 20px;
+  }
+  @media (max-width: 768px) {
+    .avatar {
+      padding: 0;
+    }
   }
 
 }

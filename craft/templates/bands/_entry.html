@@ -18,34 +18,34 @@
 {% block content %}
 <div class="container bands">
     <div class="row">
-        <div class="col-md-6">
-            <h1>{{ entry.title }}</h1>
-        </div>
+
         <div class="row">
             {% if entry.spotifyplaylistlink | length %}
-            <div class="col-md-8">
+            <div class="col-md-8 no-padding">
+                <h1>{{ entry.title }}</h1>
+            </div>
+            <div class="col-md-8 no-padding">
                 {# Fetches the first image #}
                 {% set image = entry.bandsImage.first() %}
                 {% if image %}
                 <img class="avatar" src="{{siteUrl}}{{ image.url }}" alt="">
                 {% endif %}
             </div>
-
-
-            <div class="col-md-4">
+            <div class="col-md-4 spotify-col">
                 <div class="row spotify">
-                    <div class="col-md-12">
+                    <div class="col-md-12 no-padding">
                         <h3>Spotify</h3>
                     </div>
-                    <div class="col-md-12">
-                        <iframe src="{{entry.spotifyplaylistlink|slice(0, 25)}}embed/{{entry.spotifyplaylistlink|slice(25, 300)}}"
-                                width="75%" height="300" frameborder="0" allowtransparency="true"></iframe>
-                    </div>
+                    <iframe src="{{entry.spotifyplaylistlink|slice(0, 25)}}embed/{{entry.spotifyplaylistlink|slice(25, 300)}}"
+                            width="100%" height="300" frameborder="0" allowtransparency="true"></iframe>
                 </div>
 
             </div>
             {% else %}
-            <div class="col-md-12">
+            <div class="col-md-12 no-padding">
+                <h1>{{ entry.title }}</h1>
+            </div>
+            <div class="col-md-12 no-padding">
                 {# Fetches the first image #}
                 {% set image = entry.bandsImage.first() %}
                 {% if image %}
@@ -55,9 +55,9 @@
 
             {% endif %}
 
-            <div class="col-md-12">
+            <div class="col-md-12 no-padding">
                 <div class="row body">
-                    <div class="col-md-12">
+                    <div class="col-md-12 no-padding">
                         {{ entry.body }}
                     </div>
                     {% for block in entry.social %}
@@ -67,7 +67,7 @@
                     {% case "socialmatrix" %}
                     {% if block.facebook|length or block.twitter|length or block.linkedin|length or block.soundcloud|length or block.instagram|length%}
 
-                    <div class="col-md-12">
+                    <div class="col-md-12 no-padding">
 
                         <div class="social">
                             <h5>Social Media</h5>
@@ -111,15 +111,15 @@
 
             {% set artists = entry.bandsArtists %}
             {% if artists | length %}
-            <div class="col-md-12">
+            <div class="col-md-12 no-padding">
                 <div class="row artists">
-                    <div class="col-md-12">
+                    <div class="col-md-12 no-padding">
                         <h3>Artists</h3>
                     </div>
                     {% for entry in artists %}
                     {% set image = entry.artistImage.first() %}
                     {% if image %}
-                    <div class="col-md-4">
+                    <div class="col-md-4 no-padding">
                         <a href="{{ entry.url }}">
                             <img class="featureImage" src="../{{ image.url }}" alt="">
                         </a>
@@ -132,9 +132,9 @@
 
             {% set shows = entry.bandsShows %}
             {% if shows | length %}
-            <div class="col-md-12">
+            <div class="col-md-12 no-padding">
                 <div class="row artists">
-                    <div class="col-md-12">
+                    <div class="col-md-12 no-padding">
                         <h3>Shows</h3>
                     </div>
                     {% for entry in shows %}
@@ -152,9 +152,9 @@
             {% endif %}
 
             {% if entry.youtubeUrl | length %}
-            <div class="col-md-12">
+            <div class="col-md-12 no-padding">
                 <div class="row youtube">
-                    <div class="col-md-12 nopadding">
+                    <div class="col-md-12 no-padding">
                         <h3>Youtube</h3>
                     </div>
                     <iframe width="100%" height="315" src="https://www.youtube.com/embed/{{ entry.youtubeUrl }}"

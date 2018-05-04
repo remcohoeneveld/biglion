@@ -19,9 +19,9 @@
 <div class="container artist">
     <div class="row">
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-8 no-padding">
                 <div class="row body">
-                    <div class="col-md-12">
+                    <div class="col-md-12 no-padding">
 
                         <h1>{{ entry.title }}</h1> {% for prof in entry.profession %}
                         <span class="profession">{{prof}}</span>
@@ -58,7 +58,7 @@
                 {% case "socialmatrix" %}
                 {% if block.facebook|length or block.twitter|length or block.linkedin|length or block.soundcloud|length or block.instagram|length%}
 
-                <div class="col-md-12">
+                <div class="col-md-12 no-padding">
 
                     <div class="social">
                         <h5>Social Media</h5>
@@ -99,37 +99,25 @@
                 {% endfor %}
 
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 no-padding">
                 {# Fetches the first image #}
                 {% set image = entry.artistImage.first() %}
                 {% if image %}
                 <img class="avatar" src="{{siteUrl}}{{ image.url }}" alt="">
                 {% endif %}
-
-                {% set bands = entry.artistBand %}
-                {% if bands | length %}
-                <div class="row bands">
-                    <div class="col-md-12">
-                        <h3>Bands</h3>
-                    </div>
-                    {% for entry in bands %}
-                    {% set image = entry.bandsImage.first() %}
-                    {% if image %}
-                    <div class="col-md-12">
-                        <a href="{{ entry.url }}">
-                            <img class="featureImage" src="../{{ image.url }}" alt="">
-                        </a>
-                    </div>
-                    {% endif %}
-                    {% endfor %}
-                </div>
-                {% endif %}
             </div>
 
             {% if entry.youtubeUrl | length %}
-            <div class="col-md-12">
+            {% set bands = entry.artistBand %}
+            {% if bands | length %}
+            <div class="col-md-8 no-padding">
+
+                {% else %}
+
+                <div class="col-md-12 no-padding">
+                {% endif %}
                 <div class="row youtube">
-                    <div class="col-md-12 nopadding">
+                    <div class="col-md-12 no-padding">
                         <h3>Youtube</h3>
                     </div>
                     <iframe width="100%" height="315" src="https://www.youtube.com/embed/{{ entry.youtubeUrl }}"
@@ -138,14 +126,38 @@
             </div>
             {% endif %}
 
+            {% set bands = entry.artistBand %}
+            {% if bands | length %}
+
+                {% if entry.youtubeUrl | length %}
+            <div class="col-md-4 bands">
+
+                {% else %}
+                <div class="col-md-4 no-padding bands">
+                {% endif %}
+                <div class="col-md-12 no-padding">
+                    <h3>Bands</h3>
+                </div>
+                {% for entry in bands %}
+                {% set image = entry.bandsImage.first() %}
+                {% if image %}
+                <div class="col-md-12 no-padding">
+                    <a href="{{ entry.url }}">
+                        <img class="featureImage" src="../{{ image.url }}" alt="">
+                    </a>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+            {% endif %}
+
             {% if entry.soundcloudUrl | length %}
-            <div class="col-md-12">
+            <div class="col-md-12 no-padding">
                 <div class="row soundcloud">
-                    <div class="col-md-12 nopadding">
+                    <div class="col-md-12 no-padding">
                         <h3>Soundcloud</h3>
                     </div>
-                    <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
-                            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/{{ entry.soundcloudUrl}}&color=%23ffdd00&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false"></iframe>
+                    <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/{{ entry.soundcloudUrl}}&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
                 </div>
             </div>
             {% endif %}

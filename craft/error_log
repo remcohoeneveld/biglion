@@ -1,0 +1,12 @@
+[Wed May 02 14:31:35.607994 2018] [ssl:warn] [pid 10320:tid 139859793934464] AH01909: RSA certificate configured for biglionpromotions.com:443 does NOT include an ID which matches the server name
+[Wed May 02 14:44:35.133737 2018] [ssl:warn] [pid 10320:tid 139859793934464] AH01909: RSA certificate configured for biglionpromotions.com:443 does NOT include an ID which matches the server name
+[Wed May 02 14:44:54.240131 2018] [ssl:warn] [pid 10320:tid 139859793934464] AH01909: RSA certificate configured for biglionpromotions.com:443 does NOT include an ID which matches the server name
+[Wed May 02 14:45:43.142364 2018] [ssl:warn] [pid 10320:tid 139859793934464] AH01909: RSA certificate configured for biglionpromotions.com:443 does NOT include an ID which matches the server name
+[Wed May 02 14:46:07.589322 2018] [ssl:warn] [pid 10320:tid 139859793934464] AH01909: RSA certificate configured for biglionpromotions.com:443 does NOT include an ID which matches the server name
+[Wed May 02 14:46:54.443694 2018] [ssl:warn] [pid 10320:tid 139859793934464] AH01909: RSA certificate configured for biglionpromotions.com:443 does NOT include an ID which matches the server name
+[Wed May 02 14:47:47.647209 2018] [ssl:warn] [pid 10320:tid 139859793934464] AH01909: RSA certificate configured for biglionpromotions.com:443 does NOT include an ID which matches the server name
+[Wed May 02 14:55:05.675135 2018] [ssl:warn] [pid 10320:tid 139859793934464] AH01909: RSA certificate configured for biglionpromotions.com:443 does NOT include an ID which matches the server name
+[Wed May 02 15:01:19.347986 2018] [proxy_fcgi:error] [pid 61924:tid 139859226191616] [client 89.99.11.138:50604] AH01068: Got bogus version 95, referer: http://biglionpromotions.com/admin/login
+[Wed May 02 15:01:19.348073 2018] [proxy_fcgi:error] [pid 61924:tid 139859226191616] (22)Invalid argument: [client 89.99.11.138:50604] AH01075: Error dispatching request to :, referer: http://biglionpromotions.com/admin/login
+[Wed May 02 15:07:47.065286 2018] [ssl:warn] [pid 10320:tid 139859793934464] AH01909: RSA certificate configured for biglionpromotions.com:443 does NOT include an ID which matches the server name
+[Wed May 02 15:08:12.664713 2018] [ssl:warn] [pid 10320:tid 139859793934464] AH01909: RSA certificate configured for biglionpromotions.com:443 does NOT include an ID which matches the server name

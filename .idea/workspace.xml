@@ -2,27 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72d79a01-5002-4393-8778-b35587a9b1aa" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/contactform/ContactFormPlugin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/contactform/controllers/ContactFormController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/contactform/events/ContactFormEvent.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/contactform/events/ContactFormMessageEvent.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/contactform/models/ContactFormModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/contactform/services/ContactFormService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/craft/plugins/contactform/templates/_settings.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/js/combined/site/thanks.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/biglionevents.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/biglionevents.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/craft/templates/contact/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/craft/templates/contact/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/js/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/js/scripts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/js/scripts.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/js/scripts.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/craft/templates/artists/_entry.html" beforeDir="false" afterPath="$PROJECT_DIR$/craft/templates/artists/_entry.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/craft/templates/bands/_entry.html" beforeDir="false" afterPath="$PROJECT_DIR$/craft/templates/bands/_entry.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/craft/templates/news/_entry.html" beforeDir="false" afterPath="$PROJECT_DIR$/craft/templates/news/_entry.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/craft/templates/shows/_entry.html" beforeDir="false" afterPath="$PROJECT_DIR$/craft/templates/shows/_entry.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/assets/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/styles/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/assets/styles/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/styles/style.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/assets/styles/style.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/styles/style.min.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/js/combined/site/contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/source/js/combined/site/contact.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/scss/pages/contact.scss" beforeDir="false" afterPath="$PROJECT_DIR$/source/scss/pages/contact.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/scss/pages/artists.scss" beforeDir="false" afterPath="$PROJECT_DIR$/source/scss/pages/artists.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/scss/pages/backline.scss" beforeDir="false" afterPath="$PROJECT_DIR$/source/scss/pages/backline.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/scss/pages/bands.scss" beforeDir="false" afterPath="$PROJECT_DIR$/source/scss/pages/bands.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/scss/pages/shows.scss" beforeDir="false" afterPath="$PROJECT_DIR$/source/scss/pages/shows.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/source/scss/style.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,56 +28,68 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="_layout.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/craft/templates/_layout.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1620">
-              <caret line="108" column="21" selection-start-line="108" selection-start-column="21" selection-end-line="108" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/craft/templates/contact/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="41" column="44" lean-forward="true" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
+            <state relative-caret-position="615">
+              <caret line="41" column="44" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file leaf-file-name="db.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/craft/config/db.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+            <state relative-caret-position="120">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="contact.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/scss/pages/contact.scss">
+      <file leaf-file-name="general.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/craft/config/general.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="137">
-              <caret line="44" column="45" selection-start-line="44" selection-start-column="45" selection-end-line="44" selection-end-column="45" />
+            <state relative-caret-position="420">
+              <caret line="33" selection-start-line="33" selection-end-line="33" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="thanks.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/js/combined/site/thanks.js">
+      <file leaf-file-name="shows.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/scss/pages/shows.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="870">
+              <caret line="58" column="24" selection-start-line="58" selection-start-column="24" selection-end-line="58" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="contact.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/js/combined/site/contact.js">
+      <file leaf-file-name="_entry.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/craft/templates/artists/_entry.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1665">
-              <caret line="111" selection-start-line="111" selection-end-line="111" />
+            <state relative-caret-position="799">
+              <caret line="139" column="22" lean-forward="true" selection-start-line="139" selection-start-column="22" selection-end-line="139" selection-end-column="22" />
+              <folding>
+                <element signature="e#2023#3605#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/scss/style.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-69">
+              <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bands.scss" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/source/scss/pages/bands.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="446">
+              <caret line="64" column="8" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -93,8 +97,26 @@
       <file leaf-file-name="_entry.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/craft/templates/bands/_entry.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1110">
-              <caret line="74" column="62" selection-start-line="74" selection-start-column="62" selection-end-line="74" selection-end-column="62" />
+            <state relative-caret-position="466">
+              <caret line="33" column="46" lean-forward="true" selection-start-line="33" selection-start-column="46" selection-end-line="33" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_entry.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/craft/templates/news/_entry.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="465">
+              <caret line="31" selection-start-line="31" selection-end-line="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="artists.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/scss/pages/artists.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="576">
+              <caret line="110" column="9" selection-start-line="110" selection-start-column="9" selection-end-line="110" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -112,14 +134,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>scripts-individual</find>
-      <find>object</find>
-      <find>.backline</find>
-      <find>avatar</find>
-      <find>2.2</find>
-      <find>line-height</find>
-      <find>198</find>
-      <find>siteUrl</find>
       <find>header-show</find>
       <find>darkgrey</find>
       <find>#</find>
@@ -142,6 +156,14 @@
       <find>youtube</find>
       <find>Z</find>
       <find>social</find>
+      <find>.show-detail</find>
+      <find>header-artist</find>
+      <find>nopadding</find>
+      <find>avatar</find>
+      <find>soundCloud</find>
+      <find>font-weight</find>
+      <find>margin-left</find>
+      <find>spotify</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -150,6 +172,9 @@
       <dir>$PROJECT_DIR$/craft/app</dir>
       <dir>$PROJECT_DIR$/public/images</dir>
       <dir>$PROJECT_DIR$/source/scss</dir>
+      <dir>$PROJECT_DIR$/craft/templates</dir>
+      <dir>$PROJECT_DIR$/source/scss/pages</dir>
+      <dir>$PROJECT_DIR$/source</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -181,26 +206,18 @@
         <option value="$PROJECT_DIR$/craft/templates/shows/index.html" />
         <option value="$PROJECT_DIR$/craft/templates/media/index.html" />
         <option value="$PROJECT_DIR$/craft/templates/search/index.html" />
-        <option value="$PROJECT_DIR$/source/scss/pages/shows.scss" />
         <option value="$PROJECT_DIR$/source/scss/pages/home.scss" />
         <option value="$PROJECT_DIR$/source/scss/pages/backline.scss" />
-        <option value="$PROJECT_DIR$/source/scss/pages/bands.scss" />
-        <option value="$PROJECT_DIR$/source/scss/pages/artists.scss" />
         <option value="$PROJECT_DIR$/source/js/individual/search.js" />
         <option value="$PROJECT_DIR$/source/scss/base/color.scss" />
         <option value="$PROJECT_DIR$/source/scss/base/navbar.scss" />
         <option value="$PROJECT_DIR$/public/biglion/public/css/main.css" />
         <option value="$PROJECT_DIR$/public/biglion/public/index.html" />
         <option value="$PROJECT_DIR$/craft/templates/news/_entry.html" />
-        <option value="$PROJECT_DIR$/craft/config/db.php" />
         <option value="$PROJECT_DIR$/craft/templates/cheatsheet.html" />
-        <option value="$PROJECT_DIR$/craft/config/general.php" />
         <option value="$PROJECT_DIR$/craft/templates/artists/index.html" />
         <option value="$PROJECT_DIR$/craft/templates/bands/index.html" />
         <option value="$PROJECT_DIR$/craft/templates/shows/_entry.html" />
-        <option value="$PROJECT_DIR$/craft/templates/artists/_entry.html" />
-        <option value="$PROJECT_DIR$/craft/templates/bands/_entry.html" />
-        <option value="$PROJECT_DIR$/source/scss/style.scss" />
         <option value="$PROJECT_DIR$/source/scss/base/social.scss" />
         <option value="$PROJECT_DIR$/craft/templates/index.html" />
         <option value="$PROJECT_DIR$/craft/templates/backline/index.html" />
@@ -209,6 +226,14 @@
         <option value="$PROJECT_DIR$/source/scss/pages/contact.scss" />
         <option value="$PROJECT_DIR$/source/js/combined/site/contact.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/craft/config/db.php" />
+        <option value="$PROJECT_DIR$/craft/config/general.php" />
+        <option value="$PROJECT_DIR$/source/scss/pages/shows.scss" />
+        <option value="$PROJECT_DIR$/source/scss/style.scss" />
+        <option value="$PROJECT_DIR$/source/scss/pages/artists.scss" />
+        <option value="$PROJECT_DIR$/source/scss/pages/bands.scss" />
+        <option value="$PROJECT_DIR$/craft/templates/artists/_entry.html" />
+        <option value="$PROJECT_DIR$/craft/templates/bands/_entry.html" />
       </list>
     </option>
   </component>
@@ -315,6 +340,67 @@
               <item name="biglion" type="b2602c69:ProjectViewProjectNode" />
               <item name="biglion" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+            <path>
+              <item name="biglion" type="b2602c69:ProjectViewProjectNode" />
+              <item name="biglion" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="craft" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="biglion" type="b2602c69:ProjectViewProjectNode" />
+              <item name="biglion" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="craft" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="biglion" type="b2602c69:ProjectViewProjectNode" />
+              <item name="biglion" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="craft" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="biglion" type="b2602c69:ProjectViewProjectNode" />
+              <item name="biglion" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="craft" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="artists" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="biglion" type="b2602c69:ProjectViewProjectNode" />
+              <item name="biglion" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="craft" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="bands" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="biglion" type="b2602c69:ProjectViewProjectNode" />
+              <item name="biglion" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="craft" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="news" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="biglion" type="b2602c69:ProjectViewProjectNode" />
+              <item name="biglion" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="biglion" type="b2602c69:ProjectViewProjectNode" />
+              <item name="biglion" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="source" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="biglion" type="b2602c69:ProjectViewProjectNode" />
+              <item name="biglion" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="source" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="scss" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="biglion" type="b2602c69:ProjectViewProjectNode" />
+              <item name="biglion" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="source" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="scss" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="pages" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -408,36 +494,38 @@
       <workItem from="1523612029081" duration="1764000" />
       <workItem from="1523620240011" duration="981000" />
       <workItem from="1523621679991" duration="617000" />
-      <workItem from="1523624512801" duration="38000" />
+      <workItem from="1523624512801" duration="309000" />
+      <workItem from="1525264777378" duration="4534000" />
+      <workItem from="1525433266412" duration="1394000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100969000" />
+    <option name="totallyTimeSpent" value="107168000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
+    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13045794" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13308914" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32917964" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32917964" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -454,13 +542,6 @@
     <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/source/js/combined/site/contact.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1665">
-          <caret line="111" selection-start-line="111" selection-end-line="111" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/craft/templates/bands/_entry.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1110">
@@ -546,24 +627,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/scss/pages/shows.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source/scss/pages/backline.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="601">
           <caret line="73" column="7" lean-forward="true" selection-start-line="73" selection-start-column="7" selection-end-line="73" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/scss/pages/bands.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1425">
-          <caret line="95" column="22" selection-start-line="95" selection-start-column="22" selection-end-line="95" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -575,13 +642,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/PageLoadingEffects/js/classie.js" />
-    <entry file="file://$PROJECT_DIR$/source/scss/pages/artists.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="83" column="19" selection-start-line="83" selection-start-column="19" selection-end-line="83" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source/scss/base/pagination.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -630,13 +690,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/craft/templates/cheatsheet.html" />
-    <entry file="file://$PROJECT_DIR$/craft/config/db.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/craft/templates/artists/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="585">
@@ -651,31 +704,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/craft/templates/news/_entry.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/craft/templates/shows/_entry.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="929">
           <caret line="64" selection-start-line="64" selection-end-line="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/craft/templates/artists/_entry.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1620">
-          <caret line="108" column="33" selection-start-line="108" selection-start-column="33" selection-end-line="108" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/scss/style.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -693,13 +725,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/craft/config/general.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/craft/templates/_layout.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1620">
@@ -711,13 +736,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/craft/templates/bands/_entry.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1110">
-          <caret line="74" column="62" selection-start-line="74" selection-start-column="62" selection-end-line="74" selection-end-column="62" />
         </state>
       </provider>
     </entry>
@@ -733,16 +751,9 @@
         <state relative-caret-position="-1396" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/craft/templates/contact/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="41" column="44" lean-forward="true" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source/scss/pages/contact.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
+        <state relative-caret-position="660">
           <caret line="44" column="45" selection-start-line="44" selection-start-column="45" selection-end-line="44" selection-end-column="45" />
         </state>
       </provider>
@@ -758,6 +769,86 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/craft/templates/contact/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="41" column="44" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/craft/config/db.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/craft/config/general.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/scss/pages/shows.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="870">
+          <caret line="58" column="24" selection-start-line="58" selection-start-column="24" selection-end-line="58" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/craft/templates/news/_entry.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/craft/config/license.key">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/craft/templates/artists/_entry.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="139" column="22" lean-forward="true" selection-start-line="139" selection-start-column="22" selection-end-line="139" selection-end-column="22" />
+          <folding>
+            <element signature="e#2023#3605#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/scss/pages/artists.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="110" column="9" selection-start-line="110" selection-start-column="9" selection-end-line="110" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/craft/templates/bands/_entry.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="33" column="46" lean-forward="true" selection-start-line="33" selection-start-column="46" selection-end-line="33" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/scss/style.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-69">
+          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/scss/pages/bands.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="64" column="8" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="8" />
         </state>
       </provider>
     </entry>
