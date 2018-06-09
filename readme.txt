@@ -1,21 +1,11 @@
-Welcome to Craft CMS!
+BIGLIONPROMOTIONS.COM
 
-Here are some online resources you might find useful:
+This contains the biglionpromotions.com craft templates and site,
+Here you can find all the features used for this project.
 
-
-Documentation
+Documentation craft
 -----------------------------------------------------------------
 Installation instructions and much more.
 https://craftcms.com/docs
 
-
-Changelog
------------------------------------------------------------------
-Release notes with bug fixes, improvements and additions.
-https://craftcms.com/changelog
-
-
-Stack Exchange
------------------------------------------------------------------
-A great place to ask your Craft questions, meet the awesome Craft community and earn mad reputation.
-https://craftcms.stackexchange.com/
+For more information contact remcohoeneveld@gmail.com
